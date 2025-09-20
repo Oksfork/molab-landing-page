@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "title": "Registrá a tus clientes ",
+        "description": "Toda la información organizada en la nube.",
+        "steps": [],
+        "activeClass": "active"
+    },
+    {
+        "id": 2,
+        "title": "Creá órdenes de trabajo ",
+        "description": "Asigná tareas y responsables fácilmente.",
+        "steps": [],
+        "activeClass": ""
+    },
+    {
+        "id": 3,
+        "title": "Hacé seguimiento en vivo ",
+        "description": "Controlá estados, tiempos y detalles en cualquier momento.",
+        "steps": [],
+        "activeClass": ""
+    },
+    {
+        "id": 4,
+        "title": "Cerrá y liquidá con un clic ",
+        "description": "Facturación, cobros y reportes automáticos.",
+        "steps": [],
+        "activeClass": ""
+    }
+]

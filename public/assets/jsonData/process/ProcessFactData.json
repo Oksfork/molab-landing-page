@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "value": 276,
+        "operator": "K",
+        "description": "Active user from the community"
+    },
+    {
+        "id": 2,
+        "value": 90,
+        "operator": "%",
+        "description": "(4,655) Positive Rating"
+    }
+]

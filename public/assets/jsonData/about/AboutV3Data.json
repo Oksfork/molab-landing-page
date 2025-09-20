@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Sr. Web Developer",
+        "company_logo": "envato.png",
+        "work_time": "Current"
+    },
+    {
+        "id": 2,
+        "title": "UI/UX Designer",
+        "company_logo": "themeforst.png",
+        "work_time": "2012 - Current"
+    },
+    {
+        "id": 3,
+        "title": "Sr. PHP Developer",
+        "company_logo": "codecanyon.png",
+        "work_time": "2008 - 2020"
+    }
+]

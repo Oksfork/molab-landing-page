@@ -1,0 +1,70 @@
+{
+    "monthlyPlan": [
+        {
+            "id": 1,
+            "activeClass": "",
+            "iconClass": "fab fa-wordpress",
+            "title": "WordPress Development",
+            "features": [
+                "1 Page with Elementor",
+                "Design Customization",
+                "Responsive Design"
+            ],
+            "currency": "$",
+            "price": 48,
+            "buttontext": "Order Now",
+            "buttonClass": "btn-light effect",
+            "buttonClass2": "btn-dark effect"
+        },
+        {
+            "id": 2,
+            "activeClass": "active",
+            "iconClass": "fab fa-html5",
+            "title": "Static frontend design",
+            "features": [
+                "2 Page with Bootstrap5",
+                "Design implement",
+                "Responsive Design"
+            ],
+            "currency": "$",
+            "price": 24,
+            "buttontext": "Order Now",
+            "buttonClass": "btn-theme secondary",
+            "buttonClass2": "btn-theme"
+        }
+    ],
+    "yearlyPlan": [
+        {
+            "id": 3,
+            "activeClass": "active",
+            "iconClass": "fab fa-wordpress",
+            "title": "WordPress Development",
+            "features": [
+                "1 Page with Elementor",
+                "Design Customization",
+                "Responsive Design"
+            ],
+            "currency": "$",
+            "price": 157,
+            "buttontext": "Order Now",
+            "buttonClass": "btn-theme secondary",
+            "buttonClass2": "btn-theme secondary"
+        },
+        {
+            "id": 4,
+            "activeClass": "",
+            "iconClass": "fab fa-html5",
+            "title": "Static frontend design",
+            "features": [
+                "2 Page with Bootstrap5",
+                "Design implement",
+                "Responsive Design"
+            ],
+            "currency": "$",
+            "price": 65,
+            "buttontext": "Order Now",
+            "buttonClass": "btn-light effect",
+            "buttonClass2": "btn-dark effect"
+        }
+    ]
+}

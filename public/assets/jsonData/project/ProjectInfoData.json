@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "icon": "fas fa-user",
+        "label": "Clients",
+        "value": "validthemes"
+    },
+    {
+        "id": 2,
+        "icon": "fas fa-layer-group",
+        "label": "Project Type",
+        "value": "Website Growth"
+    },
+    {
+        "id": 3,
+        "icon": "fas fa-calendar",
+        "label": "Date",
+        "value": "25 February, 2025"
+    },
+    {
+        "id": 4,
+        "icon": "fas fa-map-marked-alt",
+        "label": "Address",
+        "value": "New York United State"
+    }
+]

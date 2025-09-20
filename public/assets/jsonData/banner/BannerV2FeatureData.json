@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "icon": "fas fa-video",
+        "category": "Calling Features",
+        "title": "Live Video Call"
+    },
+    {
+        "id": 2,
+        "icon": "fas fa-database",
+        "category": "Database",
+        "title": "Unlimited Database"
+    },
+    {
+        "id": 3,
+        "icon": "fas fa-cog",
+        "category": "Core Settings",
+        "title": "Dynamic Functionality"
+    }
+]

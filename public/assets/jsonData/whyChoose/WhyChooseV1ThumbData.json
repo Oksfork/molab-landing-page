@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "thumb": "il-1.png",
+        "animation": "animate__animated animate__fadeInDown",
+        "delay": "100ms"
+    },
+    {
+        "id": 2,
+        "thumb": "d8.png",
+        "animation": "animate__animated animate__fadeInRight",
+        "delay": "300ms"
+    },
+    {
+        "id": 3,
+        "thumb": "d7.png",
+        "animation": "animate__animated animate__fadeInUp",
+        "delay": "900ms"
+    },
+    {
+        "id": 4,
+        "thumb": "d4.png",
+        "animation": "animate__animated animate__fadeInLeft",
+        "delay": "300ms"
+    },
+    {
+        "id": 5,
+        "thumb": "d5.png",
+        "animation": "animate__animated animate__fadeInLeft",
+        "delay": "900ms"
+    },
+    {
+        "id": 6,
+        "thumb": "d9.png",
+        "animation": "animate__animated animate__fadeInUp",
+        "delay": "300ms"
+    },
+    {
+        "id": 7,
+        "thumb": "d2.png",
+        "animation": "animate__animated animate__fadeInDown",
+        "delay": "1200ms"
+    },
+    {
+        "id": 8,
+        "thumb": "d11.png",
+        "animation": "animate__animated animate__fadeInUp",
+        "delay": "900ms"
+    }
+]

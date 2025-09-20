@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "name": "Básico",
+        "features": [
+            "Hasta 100 ordenes/mes",
+            "Gestión de clientes",
+            "Reportes estándar",
+            "Migración de datos inicial (costo adicional)"
+        ],
+        "price": 16,
+        "billing_cycle": "Monthly",
+        "btnClass": "btn-theme secondary"
+    },
+    {
+        "id": 2,
+        "name": "Premium",
+        "tag": "", 
+        "features": [
+            "Ordenes ilimitadas",
+            "Gestión avanzada de clientes",
+            "Pagos y facturación integrada",
+            "Liquidaciones automáticas",
+            "Soporte prioritario",
+            "Migración de datos incluida"
+        ],
+        "price": 29,
+        "billing_cycle": "Monthly",
+        "btnClass": "btn-light"
+    }
+]

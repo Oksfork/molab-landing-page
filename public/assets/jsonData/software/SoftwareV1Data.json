@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "icon": "flaticon-biometrics",
+        "thumb": "1.jpg",
+        "category": "Dashboard UI",
+        "title": "Friendly Interface"
+    },
+    {
+        "id": 2,
+        "icon": "flaticon-layers",
+        "thumb": "1.jpg",
+        "category": "Dynamic Options",
+        "title": "Extensions & Addons"
+    },
+    {
+        "id": 3,
+        "icon": "flaticon-secure-1",
+        "thumb": "1.jpg",
+        "category": "Security",
+        "title": "Strong Encryption"
+    },
+    {
+        "id": 4,
+        "icon": "flaticon-biometrics",
+        "thumb": "1.jpg",
+        "category": "Dashboard UI",
+        "title": "Editable & highly customizable"
+    },
+    {
+        "id": 5,
+        "icon": "flaticon-layers",
+        "thumb": "1.jpg",
+        "category": "Dynamic Options",
+        "title": "Super fast cloud data saved"
+    }
+]

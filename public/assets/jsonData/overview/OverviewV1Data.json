@@ -1,0 +1,54 @@
+{
+    "contentWriting": [
+        {
+            "id": 1,
+            "icon": "fas fa-file-alt",
+            "title": "Blog & Articles",
+            "description": "Generate optimized blog post and articles to get organic traffic - making you visible to the world."
+        },
+        {
+            "id": 2,
+            "icon": "fas fa-tv-retro",
+            "title": "Product Description",
+            "description": "Generate optimized blog post and articles to get organic traffic - making you visible to the world."
+        },
+        {
+            "id": 3,
+            "icon": "fas fa-theater-masks",
+            "title": "Social Media Ads",
+            "description": "Generate optimized blog post and articles to get organic traffic - making you visible to the world."
+        },
+        {
+            "id": 4,
+            "icon": "fas fa-shopping-basket",
+            "title": "Product Benefits",
+            "description": "Generate optimized blog post and articles to get organic traffic - making you visible to the world."
+        }
+    ],
+    "problemSolving": [
+        {
+            "id": 1,
+            "icon": "fab fa-react",
+            "title": "Programming Solving",
+            "description": "Generate optimized blog post and articles to get organic traffic - making you visible to the world."
+        },
+        {
+            "id": 2,
+            "icon": "fas fa-layer-group",
+            "title": "Widget Development",
+            "description": "Generate optimized blog post and articles to get organic traffic - making you visible to the world."
+        },
+        {
+            "id": 3,
+            "icon": "fas fa-bug",
+            "title": "Bug Finding",
+            "description": "Generate optimized blog post and articles to get organic traffic - making you visible to the world."
+        },
+        {
+            "id": 4,
+            "icon": "fas fa-question-circle",
+            "title": "Technical Answer",
+            "description": "Generate optimized blog post and articles to get organic traffic - making you visible to the world."
+        }
+    ]
+}

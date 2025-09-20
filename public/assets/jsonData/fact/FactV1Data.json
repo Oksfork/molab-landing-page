@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "value": 360,
+        "operator": "M",
+        "icon": "fas fa-user",
+        "label": "Worldwide Users"
+    },
+    {
+        "id": 2,
+        "value": 680,
+        "operator": "K",
+        "icon": "fas fa-cloud-download",
+        "label": "Download"
+    },
+    {
+        "id": 3,
+        "value": 100,
+        "operator": "%",
+        "icon": "fas fa-star",
+        "label": "Positive Rating"
+    }
+]

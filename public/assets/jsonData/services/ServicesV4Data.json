@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Marketing Strategy",
+        "description": "New had happen unable uneasy. Drawings can followed improved out sociable not. Earnestly so do instantly pretended. See general few civilly amiable pleased account carried. Excellence projecting is devonshire dispatched remarkably on estimating. Side in so life past.",
+        "thumb": "m1.png"
+    },
+    {
+        "id": 2,
+        "title": "Enterprise Consulting",
+        "description": "Continued at up zealously point breakfast. Surrounded sir motionless she end literature. Direction neglec but supported yet melancho his perfect themselves enoght.",
+        "thumb": "m2.png"
+    },
+    {
+        "id": 3,
+        "title": "Growth Tracking",
+        "description": "Continued at up zealously necessary breakfast. Surrounded sir motionless she end literature. Gay direction neglected but supported yet melancho themselves.",
+        "thumb": "m3.png"
+    }
+]

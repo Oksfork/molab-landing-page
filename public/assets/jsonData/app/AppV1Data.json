@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "activeClass": "",
+        "title": [
+            "Download Trials",
+            "and Freeware Software"
+        ],
+        "features": [
+            "7 days free trial",
+            "Friendly and effective support team."
+        ],
+        "btnText": "Confirm Trial",
+        "btnColor": "btn-gradient",
+        "thumb": "13.png"
+    },
+    {
+        "id": 2,
+        "activeClass": "active",
+        "title": [
+            "Purchase premium",
+            "and full access Software"
+        ],
+        "features": [
+            "Enjoy lifetime free updates.",
+            "Friendly and effective support team."
+        ],
+        "price": {
+            "amount": 29,
+            "currency": "$",
+            "billingCycle": "Monthly"
+        },
+        "btnText": "Buy Premium",
+        "btnColor": "btn-light",
+        "thumb": "14.png"
+    }
+]

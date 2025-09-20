@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "count": 360,
+        "operator": "K",
+        "label": "World Customer"
+    },
+    {
+        "id": 2,
+        "count": 98,
+        "operator": "%",
+        "label": "Positive Rating"
+    },
+    {
+        "id": 3,
+        "count": 874,
+        "operator": "+",
+        "label": "Total Branch"
+    },
+    {
+        "id": 4,
+        "count": 35,
+        "operator": "",
+        "label": "Years experience"
+    }
+]

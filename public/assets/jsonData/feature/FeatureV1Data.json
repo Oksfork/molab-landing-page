@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "className": "feature-style-one",
+        "iconClass": "flaticon-cloud-1",
+        "title": "Gestión 100% en la nube"
+    },
+    {
+        "id": 2,
+        "className": "feature-style-one",
+        "iconClass": "flaticon-cloud-service",
+        "title": "Migración de datos incluida "
+    },
+    {
+        "id": 3,
+        "className": "feature-style-one",
+        "iconClass": "flaticon-monitoring",
+        "title": "Interfaz moderna y simple",
+        "text": ""
+    },
+    {
+        "id": 4,
+        "className": "feature-style-one",
+        "iconClass": "flaticon-data-processing",
+        "title": "Trazabilidad en tiempo real"
+    }
+]

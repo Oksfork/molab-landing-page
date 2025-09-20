@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "S. Overflow",
+        "icon": "fab fa-stack-overflow",
+        "link": "https://www.stackoverflow.com"
+    },
+    {
+        "id": 2,
+        "name": "Github",
+        "icon": "fab fa-github",
+        "link": "https://www.github.com"
+    },
+    {
+        "id": 3,
+        "name": "Linkedin",
+        "icon": "fab fa-linkedin",
+        "link": "https://www.linkedin.com"
+    },
+    {
+        "id": 4,
+        "name": "Quora",
+        "icon": "fab fa-quora",
+        "link": "https://www.quora.com"
+    }
+]

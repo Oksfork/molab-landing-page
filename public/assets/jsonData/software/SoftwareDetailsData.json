@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "thumb": "1.jpg",
+        "title": "Productivity",
+        "description": "Continued at up to zealously necessary breakfast. Surrounded sir motionless she end literature. Gay direction neglected.",
+        "features": [
+            "Trends tracking",
+            "Loyalty Programs",
+            "Vendor Management"
+        ]
+    },
+    {
+        "id": 2,
+        "thumb": "2.jpg",
+        "title": "Experience",
+        "description": "Continued at up to zealously necessary breakfast. Surrounded sir motionless she end literature. Gay direction neglected.",
+        "features": [
+            "Trends tracking",
+            "Loyalty Programs",
+            "Vendor Management"
+        ]
+    },
+    {
+        "id": 3,
+        "thumb": "3.jpg",
+        "title": "Collaboration",
+        "description": "Continued at up to zealously necessary breakfast. Surrounded sir motionless she end literature. Gay direction neglected.",
+        "features": [
+            "Trends tracking",
+            "Loyalty Programs",
+            "Vendor Management"
+        ]
+    }
+]

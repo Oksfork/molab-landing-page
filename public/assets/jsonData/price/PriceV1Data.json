@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "title": "Basic Plan",
+        "description": "Low cost & affordable services to get you started very soon.",
+        "freePlan": true,
+        "planType": "Free",
+        "planPrice": "",
+        "planCurrency": "",
+        "btnClass": "btn-border",
+        "features": [
+            "Increase traffic 130%",
+            "Organic traffic 215%",
+            "10 Free Optimization"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Premium Plan",
+        "description": "Increased processing power with multiple sites, storage.",
+        "freePlan": false,
+        "planType": "/ Monthly",
+        "planPrice": 29,
+        "planCurrency": "$",
+        "btnClass": "btn-border",
+        "features": [
+            "1,300 Keywords",
+            "SEO Optimized",
+            "Live Support"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Advanced Plan",
+        "description": "Target is processing power with multiple sites, storage.",
+        "freePlan": false,
+        "planType": "/ Monthly",
+        "planPrice": 58,
+        "planCurrency": "$",
+        "btnClass": "btn-theme",
+        "features": [
+            "Increase traffic 130%",
+            "Backlink analysis",
+            "10 Free Optimization"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Business Plan",
+        "description": "Mentionling processing power with multiple sites, storage.",
+        "freePlan": false,
+        "planType": "/ Monthly",
+        "planPrice": 89,
+        "planCurrency": "$",
+        "btnClass": "btn-border",
+        "features": [
+            "Increase traffic 130%",
+            "Backlink analysis",
+            "Organic traffic 215%"
+        ]
+    }
+]

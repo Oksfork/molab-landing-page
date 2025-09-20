@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "icon": "fab fa-apple",
+        "title": "Available On",
+        "platform": "App Store",
+        "siteLink": "https://www.apple.com/app-store/"
+    },
+    {
+        "id": 2,
+        "icon": "fab fa-google-play",
+        "title": "Available On",
+        "platform": "Play Store",
+        "siteLink": "https://play.google.com/store"
+    }
+]

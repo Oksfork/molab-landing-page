@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "thumb": "5.png",
+        "thumbDark": "5-light.png",
+        "title": "Gestión 100% en la nube",
+        "description": "Accede a tus datos desde cualquier dispositivo, con conexión a internet. No necesitas instalaciones ni software adicionales.",
+        "features": []
+    },
+    {
+        "id": 2,
+        "thumb": "6.png",
+        "thumbDark": "6-light.png",
+        "title": "Trazabilidad en tiempo real",
+        "description": "Seguí el proceso de cada trabajo, desde la creación hasta la entrega. Conoce el estado de cada etapa y los detalles de cada paso.",
+        "features": []
+    },
+    {
+        "id": 3,
+        "thumb": "7.png",
+        "thumbDark": "7-light.png",
+        "title": "Interfaz moderna y simple",
+        "description": "La interfaz es moderna y fácil de usar, con una navegación intuitiva y un diseño limpio. No necesitas ser un experto en tecnología para usar la plataforma.",
+        "features": []
+    },
+    {
+        "id": 4,
+        "thumb": "8.png",
+        "thumbDark": "8-light.png",
+        "title": "Migración de datos incluida",
+        "description": "Si ya tenés un sistema de gestión, podemos migrar tus datos a Molab.app de forma sencilla y sin complicaciones.",
+        "features": []
+    }
+]

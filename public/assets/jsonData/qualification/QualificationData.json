@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "icon": "flaticon-data-management",
+        "title": "Database Integration"
+    },
+    {
+        "id": 2,
+        "icon": "flaticon-marketing-agent",
+        "title": "Digital marketing"
+    },
+    {
+        "id": 3,
+        "icon": "flaticon-rocket",
+        "title": "Software Development"
+    }
+]

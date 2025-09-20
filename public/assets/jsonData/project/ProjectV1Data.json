@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "thumb": "1.jpg",
+        "thumbFull": "1-full.jpg",
+        "title": "Effective Solutions",
+        "categories": [
+            "Digital",
+            "Business"
+        ]
+    },
+    {
+        "id": 2,
+        "thumb": "3.jpg",
+        "thumbFull": "3-full.jpg",
+        "title": "Marketing Management",
+        "categories": [
+            "Advertising",
+            "Grow"
+        ]
+    },
+    {
+        "id": 3,
+        "thumb": "4.jpg",
+        "thumbFull": "4-full.jpg",
+        "title": "Quick Startup Business",
+        "categories": [
+            "Agency",
+            "Company"
+        ]
+    },
+    {
+        "id": 4,
+        "thumb": "2.jpg",
+        "thumbFull": "2-full.jpg",
+        "title": "Digital Skill Gap",
+        "categories": [
+            "Promotion",
+            "Skill"
+        ]
+    },
+    {
+        "id": 5,
+        "thumb": "6.jpg",
+        "thumbFull": "6-full.jpg",
+        "title": "Developer Friendly Design",
+        "categories": [
+            "Designer",
+            "Creative"
+        ]
+    },
+    {
+        "id": 6,
+        "thumb": "5.jpg",
+        "thumbFull": "5-full.jpg",
+        "title": "Effective Solutions",
+        "categories": [
+            "Digital",
+            "Business"
+        ]
+    }
+]

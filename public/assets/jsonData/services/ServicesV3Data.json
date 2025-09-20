@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Registrá a tus clientes ",
+        "box_name": "figma",
+        "icon": "figma.png",
+        "description": "Toda la información organizada en la nube.",
+        "buttonText": "",
+        "counts": "01"
+    },
+    {
+        "id": 2,
+        "title": "Creá órdenes de trabajo",
+        "box_name": "wordpress",
+        "icon": "wordpress.png",
+        "description": "Asigná tareas y responsables fácilmente.",
+        "buttonText": "",
+        "counts": "02"
+    },
+    {
+        "id": 3,
+        "title": "Hacé seguimiento en vivo",
+        "box_name": "bootstrap",
+        "icon": "layers.png",
+        "description": "Controlá estados, tiempos y detalles en cualquier momento.",
+        "buttonText": "",
+        "counts": "03"
+    },
+    {
+        "id": 4,
+        "title": "Cerrá y liquidá con un clic",
+        "box_name": "bootstrap",
+        "icon": "layers.png",
+        "description": "Facturación, cobros y reportes automáticos.",
+        "buttonText": "",
+        "counts": "04"
+    }
+]

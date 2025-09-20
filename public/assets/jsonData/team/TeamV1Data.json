@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "James Baker",
+        "role": "Marketing",
+        "thumb": "1.jpg",
+        "memberInfo": "Employing win-win survival tactics is essential to guarantee proactive domination. As we progress, it is crucial to usher in a new normal, evolving from generations, survival tactics is essential positioned on the runway for advancement.",
+        "eMail": "James@gmail.com",
+        "contactNumber": "+44-20-7328-4499"
+    },
+    {
+        "id": 2,
+        "name": "Dalton Grant",
+        "role": "Project Manager",
+        "thumb": "2.jpg",
+        "memberInfo": "Execute strategies ensuring proactive domination for a win-win outcome. Navigating change demands collaboration and a new normal shaped by generation evolution, ensuring proactive domination for guiding us on the runway towards progress.",
+        "eMail": "Dalton@gmail.com",
+        "contactNumber": "+44-20-7328-4491"
+    },
+    {
+        "id": 3,
+        "name": "Istiak Ahmed",
+        "role": "Manager",
+        "thumb": "4.jpg",
+        "memberInfo": "Introduce win-win survival plans for proactive dominance. Adapting to evolving landscapes requires collective efforts and a new normal derived from generational shifts, setting to evolving landscapes requires us on a runway toward progress.",
+        "eMail": "Ahmed@gmail.com",
+        "contactNumber": "+44-20-7328-4496"
+    },
+    {
+        "id": 4,
+        "name": "Monas Lion",
+        "role": "Manager",
+        "thumb": "3.jpg",
+        "memberInfo": "Initiate survival plans for a win-win, ensuring proactive dominance. Adapting to change demands collaborative efforts and a new normal shaped by generational evolution, collaborative efforts and a placing us on a runway towards progress.",
+        "eMail": "Monas@gmail.com",
+        "contactNumber": "+44-20-7328-4493"
+    },
+    {
+        "id": 5,
+        "name": "Ryan Ricketts",
+        "role": "Project Manager",
+        "thumb": "5.jpg",
+        "memberInfo": "Implement win-win survival approaches to secure proactive domination. Navigating change necessitates collaboration and a new normal evolving from generations, guiding us on the win-win survival approaches to runway toward progress.",
+        "eMail": "Ryan@gmail.com",
+        "contactNumber": "+44-20-7328-4492"
+    },
+    {
+        "id": 6,
+        "name": "Ema Watson",
+        "role": "Manager",
+        "thumb": "6.jpg",
+        "memberInfo": "Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation is on the runway heading At the end survival strategies  of the per towards.",
+        "eMail": "Ema@gmail.com",
+        "contactNumber": "+44-20-7328-4494"
+    }
+]

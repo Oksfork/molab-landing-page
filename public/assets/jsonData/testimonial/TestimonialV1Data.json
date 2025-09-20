@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "testimonial": "Con Molab.app centralizamos todo en un solo lugar. Ahora trabajamos más rápido y con mayor control.",
+        "name": "Laboratorio Dental NovaSmile",
+        "position": "",
+        "thumb": "9.jpg"
+    },
+    {
+        "id": 2,
+        "testimonial": "La trazabilidad es excelente: en segundos sabemos en qué estado está cada trabajo.",
+        "name": "Clínica Odontológica Delta",
+        "position": "",
+        "thumb": "10.jpg"
+    }
+]

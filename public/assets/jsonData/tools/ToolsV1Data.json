@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "logo": "google.png"
+    },
+    {
+        "id": 2,
+        "logo": "trello.png"
+    },
+    {
+        "id": 3,
+        "logo": "salesforce.png"
+    },
+    {
+        "id": 4,
+        "logo": "excel.png"
+    },
+    {
+        "id": 5,
+        "logo": "slack.png"
+    },
+    {
+        "id": 6,
+        "logo": "whatsapp.png"
+    },
+    {
+        "id": 7,
+        "logo": "outlook.png"
+    },
+    {
+        "id": 8,
+        "logo": "drive.png"
+    },
+    {
+        "id": 9,
+        "logo": "zoom.png"
+    },
+    {
+        "id": 10,
+        "logo": "messenger.png"
+    }
+]

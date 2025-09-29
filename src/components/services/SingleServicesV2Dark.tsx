@@ -1,5 +1,5 @@
 import Image from "next/image";
-import arrowIcon from "@/assets/img/shape/arrow.svg"
+// import arrowIcon from "@/assets/img/shape/arrow.svg"
 import Link from "next/link";
 
 interface DataType {
@@ -12,7 +12,6 @@ interface DataType {
 const SingleServicesV2Dark = ({ service, index }: { service: DataType, index?: number }) => {
     const { id, iconDark, title, category } = service;
 
-    // Obtener clase CSS para altura escalonada
     const getStaggeredClass = (index: number) => {
         return `staggered-${index % 7}`;
     };

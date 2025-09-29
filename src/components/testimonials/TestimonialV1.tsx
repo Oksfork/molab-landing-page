@@ -7,7 +7,7 @@ import { Keyboard, Navigation, Autoplay } from 'swiper/modules';
 const TestimonialV1 = () => {
     return (
         <>
-            <div className="testimonials-area bg-gray default-padding-bottom" style={{ backgroundImage: 'url(/assets/img/shape/20.png)' }}>
+            <div className="testimonials-area  default-padding-bottom" style={{ backgroundImage: 'url(/assets/img/shape/20.png)' }}>
                 <div className="container">
                     <div className="heading-left">
                         <div className="row">

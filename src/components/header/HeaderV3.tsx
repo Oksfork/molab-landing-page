@@ -48,7 +48,6 @@ const HeaderV3 = ({ sectionClass }: DataType) => {
                                 <ul>
                                     <li className="button">
                                         <Link href="/contact-us">Free Trial</Link>
-                                        <Link href="/contact-us">Login</Link>
                                     </li>
                                 </ul>
                             </div>

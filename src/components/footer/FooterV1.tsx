@@ -1,13 +1,12 @@
 "use client";
 import Image from "next/image";
 import shape10 from "@/assets/img/shape/10.png";
-import Link from "next/link";
 import SocialShareV1 from "../social/SocialShareV1";
 import { toast } from "react-toastify";
 
 import logo from "@/assets/img/logo.png"
-import logoLight from "@/assets/img/logo-light.png"
 import logoBlue from "@/assets/img/logo-blue.png"
+import molabLogo from "@/assets/img/logo/molab_app_logo.png"
 
 interface FormEventHandler {
     (event: React.FormEvent<HTMLFormElement>): void;
@@ -35,7 +34,7 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
             logoSrc = logoBlue;
             break;
         case "light":
-            logoSrc = logoLight;
+            logoSrc = molabLogo;
             break;
         default:
             logoSrc = logo;
@@ -53,15 +52,15 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
                                     <Image className="logo" src={logoSrc} alt="Logo" />
                                     <div className="f-item newsletter">
                                         <p>
-                                            Join our subscribers list to get the instant <br /> latest news and special offers.
+                                            Unete a nuestra lista de suscriptores para recibir las últimas noticias y ofertas especiales.
                                         </p>
                                         <form onSubmit={handleForm}>
-                                            <input type="email" placeholder="Your Email" className="form-control" name="email" autoComplete="off" required />
-                                            <button type="submit">Subscribe</button>
+                                            <input type="email" placeholder="Tu email" className="form-control" name="email" autoComplete="off" required />
+                                            <button type="submit">Suscribirse</button>
                                         </form>
                                     </div>
                                     <div className="copyright-text mt-40">
-                                        <p>&copy; Copyright {(new Date().getFullYear())}. All Rights Reserved by <a href="https://themeforest.net/user/validthemes/portfolio" target="_blank">validthemes</a></p>
+                                        <p>&copy; Copyright {(new Date().getFullYear())}. Todos los derechos reservados por <a href="https://themeforest.net/user/validthemes/portfolio" target="_blank">Ar-Tec Invent</a></p>
                                     </div>
                                     <div className="footer-social mt-20">
                                         <ul>
@@ -73,8 +72,8 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
 
                             <div className="col-lg-2 col-md-6 footer-item">
                                 <div className="f-item link">
-                                    <h4 className="widget-title">Company</h4>
-                                    <ul>
+                                    <h4 className="widget-title">MOLAB</h4>
+                                    {/* <ul>
                                         <li>
                                             <Link href="/about-us">Company Profile</Link>
                                         </li>
@@ -93,14 +92,14 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
                                         <li>
                                             <Link href="/contact-us">Contact</Link>
                                         </li>
-                                    </ul>
+                                    </ul> */}
                                 </div>
                             </div>
 
                             <div className="col-lg-2 col-md-6 footer-item">
                                 <div className="f-item link">
-                                    <h4 className="widget-title">Community</h4>
-                                    <ul>
+                                    <h4 className="widget-title">Comunidad</h4>
+                                    {/* <ul>
                                         <li>
                                             <Link href="/contact-us">Career</Link>
                                         </li>
@@ -119,15 +118,15 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
                                         <li>
                                             <Link href="/about-us">Components</Link>
                                         </li>
-                                    </ul>
+                                    </ul> */}
                                 </div>
                             </div>
 
                             <div className="col-lg-3 col-md-6 item">
                                 <div className="footer-item contact">
-                                    <h4 className="widget-title">Contact Info</h4>
+                                    <h4 className="widget-title">Contacto</h4>
                                     <ul>
-                                        <li>
+                                        {/* <li>
                                             <div className="icon">
                                                 <i className="fas fa-home" />
                                             </div>
@@ -135,17 +134,26 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
                                                 <strong>Address:</strong>
                                                 5919 Trussville Crossings Pkwy, Birmingham
                                             </div>
+                                        </li> */}
+                                        <li>
+                                            <div className="icon">
+                                                <i className="fas fa-envelope" />
+                                            </div>
+                                            <div className="content">
+                                                <strong>Comercial:</strong>
+                                                <a href="mailto:info@validtheme.com">contacto@contacto.com</a>
+                                            </div>
                                         </li>
                                         <li>
                                             <div className="icon">
                                                 <i className="fas fa-envelope" />
                                             </div>
                                             <div className="content">
-                                                <strong>Email:</strong>
-                                                <a href="mailto:info@validtheme.com">info@validtheme.com</a>
+                                                <strong>Soporte:</strong>
+                                                <a href="mailto:info@validtheme.com">soporte@soporte.com</a>
                                             </div>
                                         </li>
-                                        <li>
+                                        {/* <li>
                                             <div className="icon">
                                                 <i className="fas fa-phone" />
                                             </div>
@@ -153,7 +161,7 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
                                                 <strong>Phone:</strong>
                                                 <a href="tel:2151234567">+123 34598768</a>
                                             </div>
-                                        </li>
+                                        </li> */}
                                     </ul>
                                 </div>
                             </div>

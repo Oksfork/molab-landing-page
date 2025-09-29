@@ -1,21 +1,9 @@
 "use client"
 import shape44 from "@/assets/img/shape/44.png"
-import team9 from "@/assets/img/team/9.jpg"
-import team10 from "@/assets/img/team/10.jpg"
-import team11 from "@/assets/img/team/11.jpg"
-import teamV5 from "@/assets/img/team/v5.jpg"
-import illustration3 from "@/assets/img/illustration/3.png"
 import Image from "next/image"
 import Link from "next/link"
-import { ReactTyped } from "react-typed"
 
 const BannerV4 = () => {
-
-    const textLines = [
-        '<b> unique content</b>',
-        '<b> problem solution</b>',
-        '<b> fast development</b>'
-    ]
 
     return (
         <>
@@ -35,7 +23,7 @@ const BannerV4 = () => {
                                     <p>
                                         Con Molab.app trabajás mejor, más rápido y con control total.
                                     </p>
-                                    <Link className="btn circle mt-25 btn-md btn-theme secondary animation" href="/contact-us">Probar Gratis</Link>
+                                    <Link className="btn mt-25 btn-md btn-theme secondary animation" href="/contact-us">Prueba sin costo</Link>
                                     {/* <div className="service-review">
                                         <div className="rating-provider">
                                             <Image src={team9} alt="Image Not Found" />

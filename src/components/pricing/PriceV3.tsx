@@ -6,7 +6,7 @@ import SinglePriceV3 from './SinglePriceV3';
 const PriceV3 = () => {
     return (
         <>
-            <div className="pricing-style-three-area overflow-hidden default-padding bg-gray bottom-less">
+            <div className="pricing-style-three-area overflow-hidden default-padding">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8 offset-lg-2">

@@ -2,8 +2,6 @@
 import Image from "next/image";
 import Animate from "../animation/Animate";
 import il1 from "@/assets/img/illustration/il-1.png";
-import il2 from "@/assets/img/illustration/il-2.png";
-import il3 from "@/assets/img/illustration/il-3.png";
 import { useState } from "react";
 import Link from "next/link";
 import ModalVideo from "react-modal-video";
@@ -37,14 +35,21 @@ const BannerV3 = ({ hasBg }: DataType) => {
                                             Moderno, ágil y accesible desde cualquier dispositivo.
                                             </p>
                                         </Animate>
+                                        <div className="d-flex flex-row">
                                         <Animate className="animate__animated animate__fadeInUp" delay="1200ms" duration="400ms">
                                             <div className="button mt-40">
                                                 <Link href="#" scroll={false} className="popup-youtube video-play-button with-text mt-20" onClick={() => setOpen(true)}>
                                                     <div className="effect" />
-                                                    <span><i className="fas fa-play" /> APP PRESENTATION</span>
+                                                    <span><i className="fas fa-play" /> PRESENTACIÓN</span>
                                                 </Link>
                                             </div>
                                         </Animate>
+                                        <Animate className="animate__animated animate__fadeInUp" delay="1200ms" duration="400ms">
+                                            <div className="button mt-40">
+                                                <Link href="" className="ml-20 btn btn-sm btn-theme secondary">Prueba sin costo</Link>
+                                            </div>
+                                        </Animate>    
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="col-xl-6 col-lg-6 pl-60 pl-md-15 pl-xs-15">

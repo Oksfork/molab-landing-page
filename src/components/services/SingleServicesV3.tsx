@@ -12,7 +12,7 @@ interface DataType {
 }
 
 const SingleServicesV3 = ({ service }: { service: DataType }) => {
-    const { title, icon, description, buttonText, counts, box_name } = service;
+    const { title, icon, description, counts, box_name } = service;
 
     return (
         <div className="service-style-three">

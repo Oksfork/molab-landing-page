@@ -6,17 +6,12 @@ interface DataType {
 }
 
 const SingleProcessV2 = ({ process }: { process: DataType }) => {
-    const { title, description, steps } = process;
+    const { title, description, id } = process;
 
     return (
         <>
-            <h4>{title}</h4>
+            <h4>{id}. {title}</h4>
             <p>{description}</p>
-            <ul>
-                {steps.map((step, index) => (
-                    <li key={index}>{step}</li>
-                ))}
-            </ul >
         </>
     );
 };

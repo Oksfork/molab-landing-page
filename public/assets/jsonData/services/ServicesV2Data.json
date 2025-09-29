@@ -4,48 +4,48 @@
         "icon": "appoinment.png",
         "iconDark": "appoinment-light.png",
         "title": "Registro de clientes y cuentas corrientes",
-        "category": "Appointment"
+        "category": "Registro"
     },
     {
         "id": 2,
         "icon": "team.png",
         "iconDark": "team-light.png",
-        "title": "Gestión integral de órdenes y entregas",
-        "category": "Management"
+        "title": "Control integral de órdenes y entregas",
+        "category": "Gestión"
     },
     {
         "id": 3,
         "icon": "users.png",
         "iconDark": "users-light.png",
         "title": "Cobros, pagos y liquidaciones automáticas",
-        "category": "Multi User"
+        "category": "Gestión"
     },
     {
         "id": 4,
         "icon": "creativity.png",
         "iconDark": "creativity-light.png",
         "title": "Trazabilidad completa de cada trabajo",
-        "category": "Customization"
+        "category": "Control y seguimiento"
     },
     {
         "id": 5,
         "icon": "cloud-lock.png",
         "iconDark": "cloud-lock-light.png",
         "title": "Reportes automáticos y exportables (Excel/PDF)",
-        "category": "Cloud Server"
+        "category": "Gestión"
     },
     {
         "id": 6,
         "icon": "cloud-lock.png",
         "iconDark": "cloud-lock-light.png",
         "title": "Plataforma en la nube disponible 24/7",
-        "category": "Cloud Server"
+        "category": "Servicio en Nube"
     },
     {
         "id": 7,
         "icon": "cloud-lock.png",
         "iconDark": "cloud-lock-light.png",
         "title": "Servicio de migración de datos para nuevos clientes",
-        "category": "Cloud Server"
+        "category": "Integración"
     }
 ]

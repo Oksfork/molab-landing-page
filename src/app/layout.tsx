@@ -27,7 +27,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Anaton - SaaS Landing Page React NextJS Template"
+  title: "Molab.app || Tu contol en la nube"
 };
 
 export default function RootLayout({

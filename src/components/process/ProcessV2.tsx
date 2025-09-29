@@ -22,7 +22,7 @@ const ProcessV2 = () => {
                     <div className="row">
                         <div className="col-lg-6">
                             <div className="heading-left">
-                                <h5 className="sub-heading theme">¿Cómo Funciona?</h5>
+                                <h5 className="sub-heading">¿Cómo Funciona?</h5>
                                 <h2 className="heading">Te contamos paso a paso</h2>
                             </div>
                         </div>

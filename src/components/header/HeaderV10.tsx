@@ -1,12 +1,10 @@
 "use client"
 import Link from 'next/link';
-import MainMenu from './MainMenu';
 import useStickyMenu from '@/hooks/useStickyMenu';
 import useSidebarMenu from '@/hooks/useSidebarMenu';
-import useSubMenuToggle from '@/hooks/useSubMenuToggle';
+// import useSubMenuToggle from '@/hooks/useSubMenuToggle';
 import Image from 'next/image';
-import logo from "@/assets/img/logo.png"
-import logoLight from "@/assets/img/logo-light.png"
+import molabLogo from "@/assets/img/logo/molab_app_logo.png"
 
 interface DataType {
     sectionClass?: string
@@ -15,8 +13,8 @@ interface DataType {
 const HeaderV10 = ({ sectionClass }: DataType) => {
 
     const isMenuSticky = useStickyMenu();
-    const { isOpen, openMenu, closeMenu } = useSidebarMenu();
-    const toggleSubMenu = useSubMenuToggle();
+    const { isOpen, openMenu } = useSidebarMenu();
+    // const toggleSubMenu = useSubMenuToggle();
 
     return (
         <>
@@ -30,26 +28,25 @@ const HeaderV10 = ({ sectionClass }: DataType) => {
                                 <i className="fa fa-bars" />
                             </button>
                             <Link className="navbar-brand" href="/">
-                                <Image src={logoLight} className="logo" alt="Logo" />
+                                <Image src={molabLogo} className="logo" alt="Logo" />
                             </Link>
                         </div>
 
                         {/* Menu Area */}
-                        <div className={`collapse navbar-collapse collapse-mobile ${isOpen ? "show" : ""}`} id="navbar-menu">
+                        {/* <div className={`collapse navbar-collapse collapse-mobile ${isOpen ? "show" : ""}`} id="navbar-menu">
                             <Image src={logo} alt="Logo" />
                             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu" onClick={closeMenu}>
                                 <i className="fa fa-times" />
                             </button>
                             <MainMenu toggleSubMenu={toggleSubMenu} />
-                        </div>
+                        </div> */}
 
                         {/* Header Right */}
                         <div className="attr-right">
                             <div className="attr-nav">
                                 <ul>
                                     <li className="button">
-                                        <Link href="/contact-us">Free Trial</Link>
-                                        <Link href="/contact-us">Login</Link>
+                                        <Link href="/contact-us">PRUEBA SIN COSTO</Link>
                                     </li>
                                 </ul>
                             </div>

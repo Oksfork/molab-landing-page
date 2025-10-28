@@ -17,7 +17,7 @@ const ProcessV2 = () => {
 
     return (
         <>
-            <div className="process-style-two-area default-padding bg-gray bg-fixed overflow-hidden" style={{ backgroundImage: 'url(/assets/img/shape/banner-3.jpg)' }}>
+            <div className="process-style-two-area custom-process-area default-padding bg-fixed overflow-hidden">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">

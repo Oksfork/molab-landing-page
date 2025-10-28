@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Animate from "../animation/Animate";
-import il1 from "@/assets/img/illustration/il-1.png";
+import il1 from "@/assets/img/illustration/ill_with_pc.png";
 import { useState } from "react";
 import Link from "next/link";
 import ModalVideo from "react-modal-video";
@@ -17,7 +17,7 @@ const BannerV3 = ({ hasBg }: DataType) => {
     return (
         <>
             <div className="banner-style-three-area overflow-hidden"
-                style={{ backgroundImage: hasBg ? 'url(/assets/img/shape/lab_dental.png)' : "none" }}>
+                style={{ backgroundImage: hasBg ? 'url(/assets/img/banner/trama_background_banner_1.png)' : "none" }}>
                 <div className="banner-shape-left-top" style={{ backgroundImage: 'url(/assets/img/shape/5.png)' }} />
                 <div className="banner-style-three">
                     <div className="container">

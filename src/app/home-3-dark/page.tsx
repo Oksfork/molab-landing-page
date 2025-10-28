@@ -8,6 +8,7 @@ import PriceV3 from "@/components/pricing/PriceV3";
 import ProcessV2 from "@/components/process/ProcessV2";
 import ServicesV2Dark from "@/components/services/ServicesV2Dark";
 import TestimonialV1 from "@/components/testimonials/TestimonialV1";
+import PagePatternWrapper from "@/components/layout/PagePatternWrapper";
 
 export const metadata = {
     title: "Molab.app || Tu contol en la nube"
@@ -15,9 +16,9 @@ export const metadata = {
 
 const Home3Dark = () => {
     return (
-        <>
+        <PagePatternWrapper>
             <HeaderV10 sectionClass="dark"></HeaderV10>
-            <BannerV3 hasBg={true}></BannerV3>
+            <BannerV3 hasBg={false}></BannerV3>
             <FeatureV1 />
             <ProcessV2 />
             <ServicesV2Dark></ServicesV2Dark>
@@ -26,7 +27,7 @@ const Home3Dark = () => {
             <BannerV4 />
             <FooterV1 logoColor="light" />
             <DarkClass />
-        </>
+        </PagePatternWrapper>
     );
 };
 

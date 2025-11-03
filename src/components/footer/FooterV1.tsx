@@ -32,12 +32,12 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
         setIsSubmitting(true);
         
         const form = event.target as HTMLFormElement;
-        const formData = new FormData(form);
-        const data = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-            message: formData.get('message')
-        };
+        // const formData = new FormData(form);
+        // const data = {
+        //     name: formData.get('name'),
+        //     email: formData.get('email'),
+        //     message: formData.get('message')
+        // };
 
         // Simular envío (aquí puedes agregar tu lógica de API)
         setTimeout(() => {

@@ -1,5 +1,3 @@
-import shape11 from "@/assets/img/shape/11.png";
-import Image from "next/image";
 import FeatureV1Data from "@/assets/jsonData/feature/FeatureV1Data.json"
 import SingleFeatureV1 from "./SingleFeatureV1";
 
@@ -22,7 +20,7 @@ const FeatureV1 = ({ hasBg, sectionClass }: DataType) => {
                                     <div className="row align-center">
                                         <div className="col-lg-6 col-md-6 col-6">
                                             <div className="item-grid">
-                                                {FeatureV1Data.slice(0, 2).map((feature, index) =>
+                                                {FeatureV1Data.slice(0, 2).map((feature) =>
                                                     <SingleFeatureV1 
                                                         feature={feature} 
                                                         key={feature.id}
@@ -32,7 +30,7 @@ const FeatureV1 = ({ hasBg, sectionClass }: DataType) => {
                                         </div>
                                         <div className="col-lg-6 col-md-6 col-6 mt-md-30 mt-xs-30">
                                             <div className="item-grid">
-                                                {FeatureV1Data.slice(2, 3).map((feature, index) =>
+                                                {FeatureV1Data.slice(2, 3).map((feature) =>
                                                     <SingleFeatureV1 
                                                         feature={feature} 
                                                         key={feature.id}
@@ -40,7 +38,7 @@ const FeatureV1 = ({ hasBg, sectionClass }: DataType) => {
                                                 )}
                                             </div>
                                             <div className="item-grid mt-2">
-                                                {FeatureV1Data.slice(3, 4).map((feature, index) =>
+                                                {FeatureV1Data.slice(3, 4).map((feature) =>
                                                     <SingleFeatureV1 
                                                         feature={feature} 
                                                         key={feature.id}

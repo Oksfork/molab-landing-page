@@ -1,5 +1,3 @@
-import pricingShape from '@/assets/img/shape/pricing.png';
-import Image from 'next/image';
 import PriceV3Data from "@/assets/jsonData/price/PriceV3Data.json"
 import SinglePriceV3 from './SinglePriceV3';
 

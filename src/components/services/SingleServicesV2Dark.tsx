@@ -11,7 +11,7 @@ interface DataType {
 }
 
 const SingleServicesV2Dark = ({ service, index }: { service: DataType, index?: number }) => {
-    const { id, iconDark, title, category } = service;
+    const { iconDark, title, category } = service;
     const [isHovered, setIsHovered] = useState(false);
     const animationDelay = (index || 0) * 0.1;
 

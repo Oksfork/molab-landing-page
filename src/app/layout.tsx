@@ -27,7 +27,29 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Molab.app || Tu contol en la nube"
+  title: "Molab.app || Tu control en la nube",
+  description: "Gestión integral para laboratorios dentales. Controla clientes, órdenes, pagos y liquidaciones en una sola plataforma en la nube. Moderno, rápido y accesible desde cualquier dispositivo.",
+  keywords: ["laboratorio dental", "software dental", "gestión laboratorio", "software odontología", "software en la nube"],
+  authors: [{ name: "Molab.app" }, {name: "OffnenSystem"}, {name: "Artec Invent"}],
+  openGraph: {
+    title: "Molab.app - Tu laboratorio dental en la nube",
+    description: "Plataforma de gestión integral para laboratorios dentales",
+    url: "https://molab.app",
+    siteName: "Molab.app",
+    images: [{ url: "/assets/img/logo/molab_app_logo.png" }],
+    locale: "es_AR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Molab.app - Tu laboratorio dental en la nube",
+    description: "Gestión integral para laboratorios dentales",
+    images: ["/assets/img/logo/molab_app_logo.png"],
+  },
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://molab.app",
+  },
 };
 
 export default function RootLayout({
@@ -36,7 +58,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className={`${outfit.className}`}>
         <Dependency />
         {children}

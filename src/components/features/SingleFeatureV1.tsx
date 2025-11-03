@@ -9,24 +9,36 @@ interface DataType {
     text?: string;
 }
 
-const SingleFeatureV1 = ({ feature }: { feature: DataType }) => {
+const SingleFeatureV1 = ({ 
+    feature, 
+    delay = 0 
+}: { 
+    feature: DataType;
+    delay?: number;
+}) => {
     const { className, iconClass, title, text } = feature;
-    const [active, setActive] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <>
-            <div className={`${className} ${active ? 'active' : ''}`}
-                onMouseOver={() => setActive(true)}
-                onMouseOut={() => setActive(false)}
-            >
-                <div className="bg" style={{ backgroundImage: 'url(/assets/img/shape/13.png)' }} />
-                <div className="icon">
+        <div 
+            className={`${className} glass-card ${isHovered ? 'is-hovered' : ''}`}
+            onMouseOver={() => setIsHovered(true)}
+            onMouseOut={() => setIsHovered(false)}
+            style={{ animationDelay: `${delay}s` }}
+        >
+            <div className="top-border" />
+            
+            <div className="content-row">
+                <div className="icon-container">
                     <i className={iconClass} />
                 </div>
-                <h4>{title}</h4>
-                <p>{[text]}</p>
+                <h4 className="title-content">
+                    {title}
+                </h4>
             </div>
-        </>
+            
+            {text && <p className="text-content">{text}</p>}
+        </div>
     );
 };
 

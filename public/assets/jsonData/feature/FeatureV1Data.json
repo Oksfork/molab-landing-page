@@ -3,25 +3,28 @@
         "id": 1,
         "className": "feature-style-one",
         "iconClass": "flaticon-cloud-1",
-        "title": "Gestión 100% en la nube"
+        "title": "100% en la nube, sin instalaciones",
+        "text": "Accedé desde cualquier dispositivo"
     },
     {
         "id": 2,
         "className": "feature-style-one",
         "iconClass": "flaticon-cloud-service",
-        "title": "Migración de datos incluida "
+        "title": "Migración de datos sin complicaciones",
+        "text": "Pasamos toda tu información actual"
     },
     {
         "id": 3,
         "className": "feature-style-one",
         "iconClass": "flaticon-monitoring",
-        "title": "Interfaz moderna y simple",
-        "text": ""
+        "title": "Interfaz moderna en 3 minutos",
+        "text": "Diseñada para técnicos, no para informáticos"
     },
     {
         "id": 4,
         "className": "feature-style-one",
         "iconClass": "flaticon-data-processing",
-        "title": "Trazabilidad en tiempo real"
+        "title": "Trazabilidad en tiempo real",
+        "text": "Sabé dónde está cada trabajo, siempre"
     }
 ]

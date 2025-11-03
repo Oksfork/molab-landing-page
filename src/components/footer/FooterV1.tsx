@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
-import shape10 from "@/assets/img/shape/10.png";
 import SocialShareV1 from "../social/SocialShareV1";
 import { toast } from "react-toastify";
+import { useState } from "react";
 
 import logo from "@/assets/img/logo.png"
 import logoBlue from "@/assets/img/logo-blue.png"
@@ -18,12 +18,33 @@ interface DataType {
 }
 
 const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleForm: FormEventHandler = (event) => {
         event.preventDefault()
         const form = event.target as HTMLFormElement;
         form.reset()
         toast.success("Thanks For Subscribe")
+    }
+
+    const handleContactForm = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        setIsSubmitting(true);
+        
+        const form = event.target as HTMLFormElement;
+        const formData = new FormData(form);
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            message: formData.get('message')
+        };
+
+        // Simular envío (aquí puedes agregar tu lógica de API)
+        setTimeout(() => {
+            form.reset();
+            toast.success("Mensaje enviado correctamente. Te responderemos pronto!");
+            setIsSubmitting(false);
+        }, 1500);
     }
 
     // Footer Logo Color
@@ -47,10 +68,10 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
                     <div className="f-items default-padding">
                         <div className="row">
 
-                            <div className="col-lg-5 col-md-6 footer-item pr-50 pr-xs-15 pr-md-15">
+                            <div className="col-lg-4 col-md-6 footer-item pr-50 pr-xs-15 pr-md-15">
                                 <div className="f-item about">
                                     <Image className="logo" src={logoSrc} alt="Logo" />
-                                    <div className="f-item newsletter">
+                                    <div className="f-item newsletter mt-30">
                                         <p>
                                             Unete a nuestra lista de suscriptores para recibir las últimas noticias y ofertas especiales.
                                         </p>
@@ -70,71 +91,49 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
                                 </div>
                             </div>
 
-                            <div className="col-lg-2 col-md-6 footer-item">
-                                <div className="f-item link">
-                                    <h4 className="widget-title">MOLAB</h4>
-                                    {/* <ul>
-                                        <li>
-                                            <Link href="/about-us">Company Profile</Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/about-us">About</Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/faq">Help Center</Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/contact-us">Career</Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/pricing">Plans & Pricing</Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/contact-us">Contact</Link>
-                                        </li>
-                                    </ul> */}
+                            <div className="col-lg-4 col-md-6">
+                                <div className="footer-item contact-form">
+                                    <h4 className="widget-title">Contáctanos</h4>
+                                    <p className="mb-30">¿Tienes alguna pregunta? Escríbenos y te responderemos lo antes posible.</p>
+                                    <form onSubmit={handleContactForm} className="d-flex flex-column gap-3">
+                                        <div className="form-group">
+                                            <input 
+                                                type="text" 
+                                                name="name"
+                                                placeholder="Tu nombre" 
+                                                className="form-control" 
+                                                required 
+                                            />
+                                        </div>
+                                        <div className="form-group">
+                                            <input 
+                                                type="email" 
+                                                name="email"
+                                                placeholder="Tu email" 
+                                                className="form-control" 
+                                                required 
+                                            />
+                                        </div>
+                                        <div className="form-group">
+                                            <textarea 
+                                                name="message"
+                                                placeholder="Tu mensaje" 
+                                                className="form-control" 
+                                                rows={4}
+                                                required
+                                            ></textarea>
+                                        </div>
+                                        <button type="submit" className="btn btn-primary w-100 btn-sm" disabled={isSubmitting}>
+                                            {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
 
-                            <div className="col-lg-2 col-md-6 footer-item">
-                                <div className="f-item link">
-                                    <h4 className="widget-title">Comunidad</h4>
-                                    {/* <ul>
-                                        <li>
-                                            <Link href="/contact-us">Career</Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/about-us">Leadership</Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/about-us">Strategy</Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/service-details">Services</Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/about-us">History</Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/about-us">Components</Link>
-                                        </li>
-                                    </ul> */}
-                                </div>
-                            </div>
-
-                            <div className="col-lg-3 col-md-6 item">
+                            <div className="col-lg-4 col-md-6">
                                 <div className="footer-item contact">
-                                    <h4 className="widget-title">Contacto</h4>
+                                    <h4 className="widget-title">Atención al cliente</h4>
                                     <ul>
-                                        {/* <li>
-                                            <div className="icon">
-                                                <i className="fas fa-home" />
-                                            </div>
-                                            <div className="content">
-                                                <strong>Address:</strong>
-                                                5919 Trussville Crossings Pkwy, Birmingham
-                                            </div>
-                                        </li> */}
                                         <li>
                                             <div className="icon">
                                                 <i className="fas fa-envelope" />
@@ -153,15 +152,15 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
                                                 <a href="mailto:info@validtheme.com">soporte@soporte.com</a>
                                             </div>
                                         </li>
-                                        {/* <li>
+                                        <li className="whatsapp-glass-item">
                                             <div className="icon">
-                                                <i className="fas fa-phone" />
+                                                <i className="fab fa-whatsapp" />
                                             </div>
                                             <div className="content">
-                                                <strong>Phone:</strong>
-                                                <a href="tel:2151234567">+123 34598768</a>
+                                                <strong>Whatsapp:</strong>
+                                                <a href="mailto:info@validtheme.com">+54 9 11 3645-7906</a>
                                             </div>
-                                        </li> */}
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -170,7 +169,6 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
                     </div>
                 </div>
 
-                {/* Footer Bottom */}
                 <div className="footer-bottom bg-dark text-light text-center">
                     <div className="container">
                         <div className="row">
@@ -181,10 +179,6 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
                             </div>
                         </div>
                     </div>
-                </div>
-                {/* End Footer Bottom */}
-                <div className="foter-shape-right-bottom">
-                    <Image src={shape10} alt="Thumb" />
                 </div>
             </footer>
         </>

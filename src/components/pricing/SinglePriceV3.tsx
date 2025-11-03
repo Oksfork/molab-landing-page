@@ -1,4 +1,7 @@
+"use client";
+
 import Link from 'next/link';
+import { useState } from 'react';
 
 interface DataType {
     id?: number;
@@ -12,16 +15,40 @@ interface DataType {
 
 const SinglePriceV3 = ({ plan }: { plan: DataType }) => {
     const { name, features, price, billing_cycle, tag, btnClass } = plan;
+    const [isHovered, setIsHovered] = useState(false);
+    const isPremium = name === 'Premium';
 
     return (
-        <div className="pricing-style-threee active">
-            <div className="pricing-header">
-                <h4>
-                    {name} {tag && <span>{tag}</span>}
+        <div 
+            className={`glass-pricing-card ${isHovered ? 'is-hovered' : ''} ${isPremium ? 'premium-card' : ''}`}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
+            <div className="glass-overlay" />
+            <div className="top-accent" />
+            
+            {/* Glow effect solo para Premium */}
+            {isPremium && <div className="glow-ring" />}
+            
+            {tag && (
+                <div className="popular-badge">
+                    {tag}
+                </div>
+            )}
+           
+            <div className={`pricing-header ${isPremium ? 'text-gradient' : ''} d-flex align-items-center gap-2`}>
+                    {
+                        isPremium && (
+                                <i className="fas fa-star plan-name fs-20" />
+                        )
+                    }
+                <h4 className="plan-name">
+                    {name}
                 </h4>
             </div>
+            
             <div className="pricing-content">
-                <ul>
+                <ul className="features-list">
                     {features.map((feature, index) => (
                         <li key={index}>
                             <i className={`fas ${feature.includes("Unlimited Logins") ? "fa-times-circle" : "fa-check-circle"}`} />
@@ -29,8 +56,9 @@ const SinglePriceV3 = ({ plan }: { plan: DataType }) => {
                         </li>
                     ))}
                 </ul>
-                <div className="price">
-                    <h2>
+                
+                <div className="price-section">
+                    <h2 className="price-value">
                         <sup>$</sup>{price} <sub>/ {billing_cycle}</sub>
                     </h2>
                     <Link className={`btn mt-25 btn-sm effect ${btnClass}`} href="/contact-us">

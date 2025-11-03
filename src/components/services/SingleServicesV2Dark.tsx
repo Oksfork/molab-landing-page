@@ -1,6 +1,7 @@
+"use client";
+
 import Image from "next/image";
-// import arrowIcon from "@/assets/img/shape/arrow.svg"
-import Link from "next/link";
+import { useState } from "react";
 
 interface DataType {
     id?: number;
@@ -11,35 +12,40 @@ interface DataType {
 
 const SingleServicesV2Dark = ({ service, index }: { service: DataType, index?: number }) => {
     const { id, iconDark, title, category } = service;
-
-    const getStaggeredClass = (index: number) => {
-        return `staggered-${index % 7}`;
-    };
-
-    const staggeredClass = getStaggeredClass(index || 0);
+    const [isHovered, setIsHovered] = useState(false);
+    const animationDelay = (index || 0) * 0.1;
 
     return (
-        <div className={`item modern-service-card ${staggeredClass}`}>
-            <div className="icon">
-                <Image 
-                    src={`/assets/img/icon/${iconDark}`} 
-                    alt="Icon" 
-                    width={40} 
-                    height={40}
-                />
+        <div 
+            className={`glassmorphism-card ${isHovered ? 'is-hovered' : ''}`}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            style={{ animationDelay: `${animationDelay}s` }}
+        >
+            <div className="glass-layer" />
+            <div className="top-glow" />
+            
+            <div className="content-wrapper">
+                <div className="icon-wrapper glass-icon">
+                    <Image 
+                        src={`/assets/img/icon/${iconDark}`} 
+                        alt={title || `Ícono ${index || 0}`}
+                        width={40} 
+                        height={40}
+                    />
+                </div>
+                
+                <div className="text-content">
+                    {category && (
+                        <span className="category glass-category">
+                            {category}
+                        </span>
+                    )}
+                    <p className="title-text">
+                        {title}
+                    </p>
+                </div>
             </div>
-            
-            <h3>
-                <Link href={`/service-details/${id}`}>
-                    {title}
-                </Link>
-            </h3>
-            
-            {category && (
-                <span className="category">
-                    {category}
-                </span>
-            )}
         </div>
     );
 };

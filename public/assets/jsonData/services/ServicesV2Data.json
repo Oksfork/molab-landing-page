@@ -10,42 +10,35 @@
         "id": 2,
         "icon": "team.png",
         "iconDark": "team-light.png",
-        "title": "Control integral de órdenes y entregas",
+        "title": "Control de órdenes y entregas",
         "category": "Gestión"
     },
     {
         "id": 3,
         "icon": "users.png",
         "iconDark": "users-light.png",
-        "title": "Cobros, pagos y liquidaciones automáticas",
+        "title": "Cobros y liquidaciones automáticas",
         "category": "Gestión"
     },
     {
         "id": 4,
         "icon": "creativity.png",
         "iconDark": "creativity-light.png",
-        "title": "Trazabilidad completa de cada trabajo",
-        "category": "Control y seguimiento"
+        "title": "Trazabilidad completa",
+        "category": "Control"
     },
     {
         "id": 5,
         "icon": "cloud-lock.png",
         "iconDark": "cloud-lock-light.png",
-        "title": "Reportes automáticos y exportables (Excel/PDF)",
+        "title": "Reportes y exportación",
         "category": "Gestión"
     },
     {
         "id": 6,
         "icon": "cloud-lock.png",
         "iconDark": "cloud-lock-light.png",
-        "title": "Plataforma en la nube disponible 24/7",
-        "category": "Servicio en Nube"
-    },
-    {
-        "id": 7,
-        "icon": "cloud-lock.png",
-        "iconDark": "cloud-lock-light.png",
-        "title": "Servicio de migración de datos para nuevos clientes",
-        "category": "Integración"
+        "title": "Plataforma 24/7 en la nube",
+        "category": "Nube"
     }
 ]

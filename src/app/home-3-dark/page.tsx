@@ -7,12 +7,12 @@ import HeaderV10 from "@/components/header/HeaderV10";
 import PriceV3 from "@/components/pricing/PriceV3";
 import ProcessV2 from "@/components/process/ProcessV2";
 import ServicesV2Dark from "@/components/services/ServicesV2Dark";
-import TestimonialV1 from "@/components/testimonials/TestimonialV1";
 import PagePatternWrapper from "@/components/layout/PagePatternWrapper";
 
 export const metadata = {
-    title: "Molab.app || Tu contol en la nube"
-};
+    title: "Molab.app - Software de Gestión para Laboratorios Dentales",
+    description: "Software en la nube para gestión integral de laboratorios dentales. Control de clientes, órdenes, pagos, liquidaciones y trazabilidad completa."
+  };
 
 const Home3Dark = () => {
     return (
@@ -23,7 +23,6 @@ const Home3Dark = () => {
             <ProcessV2 />
             <ServicesV2Dark></ServicesV2Dark>
             <PriceV3 />
-            <TestimonialV1></TestimonialV1>
             <BannerV4 />
             <FooterV1 logoColor="light" />
             <DarkClass />

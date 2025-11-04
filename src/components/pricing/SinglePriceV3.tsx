@@ -19,10 +19,11 @@ const SinglePriceV3 = ({ plan }: { plan: DataType }) => {
     const isPremium = name === 'Premium';
 
     return (
-        <div 
+        <article 
             className={`glass-pricing-card ${isHovered ? 'is-hovered' : ''} ${isPremium ? 'premium-card' : ''}`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            aria-label={`Plan ${name}`}
         >
             <div className="glass-overlay" />
             <div className="top-accent" />
@@ -42,9 +43,9 @@ const SinglePriceV3 = ({ plan }: { plan: DataType }) => {
                                 <i className="fas fa-star plan-name fs-20" />
                         )
                     }
-                <h4 className="plan-name">
+                <h3 className="plan-name">
                     {name}
-                </h4>
+                </h3>
             </div>
             
             <div className="pricing-content">
@@ -61,12 +62,12 @@ const SinglePriceV3 = ({ plan }: { plan: DataType }) => {
                     <h2 className="price-value">
                         <sup>$</sup>{price} <sub>/ {billing_cycle}</sub>
                     </h2>
-                    <Link className={`btn mt-25 btn-sm effect ${btnClass}`} href="/contact-us">
+                    <Link className={`btn mt-25 btn-sm effect ${btnClass}`} href="https://wa.me/5491136457906" target="_blank" aria-label="Solicitar prueba sin costo">
                         Purchase Plan
                     </Link>
                 </div>
             </div>
-        </div>
+        </article>
     );
 };
 

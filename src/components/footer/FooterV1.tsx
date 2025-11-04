@@ -62,22 +62,25 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
     }
 
     return (
-        <>
             <footer className={`bg-dark text-light ${sectionClass ? sectionClass : ""}`}>
                 <div className="container">
-                    <div className="f-items default-padding">
+                    <div className="p-3">
                         <div className="row">
 
-                            <div className="col-lg-4 col-md-6 footer-item pr-50 pr-xs-15 pr-md-15">
+                            <section 
+                                className="col-lg-4 col-md-6 footer-item pr-50 pr-xs-15 pr-md-15"
+                                aria-label="Sobre nosotros - Software de gestión para laboratorios dentales"
+                            >    
                                 <div className="f-item about">
-                                    <Image className="logo" src={logoSrc} alt="Logo" />
-                                    <div className="f-item newsletter mt-30">
+                                    <Image className="logo" src={logoSrc} alt="Molab.app - Software de gestión para laboratorios dentales" />
+                                    <div className="mt-30">
                                         <p>
                                             Unete a nuestra lista de suscriptores para recibir las últimas noticias y ofertas especiales.
                                         </p>
-                                        <form onSubmit={handleForm}>
+                                        <form onSubmit={handleForm} className="d-flex flex-column gap-2">
+                                            <label htmlFor="email">Email</label>
                                             <input type="email" placeholder="Tu email" className="form-control" name="email" autoComplete="off" required />
-                                            <button type="submit">Suscribirse</button>
+                                            <button type="submit" className="w-100 btn btn-primary mt-2">Suscribirse</button>
                                         </form>
                                     </div>
                                     <div className="copyright-text mt-40">
@@ -89,14 +92,17 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
+                            </section>
 
-                            <div className="col-lg-4 col-md-6">
+                            <section 
+                                className="col-lg-4 col-md-6" 
+                                aria-label="Contáctanos - Software de gestión para laboratorios dentales">
                                 <div className="footer-item contact-form">
-                                    <h4 className="widget-title">Contáctanos</h4>
+                                    <h2 className="widget-title">Contáctanos</h2>
                                     <p className="mb-30">¿Tienes alguna pregunta? Escríbenos y te responderemos lo antes posible.</p>
                                     <form onSubmit={handleContactForm} className="d-flex flex-column gap-3">
                                         <div className="form-group">
+                                            <label htmlFor="name" className="sr-only">Nombre</label>
                                             <input 
                                                 type="text" 
                                                 name="name"
@@ -106,6 +112,7 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
                                             />
                                         </div>
                                         <div className="form-group">
+                                            <label htmlFor="email" className="sr-only">Email</label>
                                             <input 
                                                 type="email" 
                                                 name="email"
@@ -115,6 +122,7 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
                                             />
                                         </div>
                                         <div className="form-group">
+                                            <label htmlFor="message" className="sr-only">Mensaje</label>
                                             <textarea 
                                                 name="message"
                                                 placeholder="Tu mensaje" 
@@ -128,11 +136,14 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
                                         </button>
                                     </form>
                                 </div>
-                            </div>
+                            </section>
 
-                            <div className="col-lg-4 col-md-6">
-                                <div className="footer-item contact">
-                                    <h4 className="widget-title">Atención al cliente</h4>
+                            <address 
+                                className="col-lg-4 col-md-6"
+                                aria-label="Atención al cliente - Software de gestión para laboratorios dentales"
+                            >
+                                <article className="footer-item contact">
+                                    <h2 className="widget-title">Atención al cliente</h2>
                                     <ul>
                                         <li>
                                             <div className="icon">
@@ -158,30 +169,17 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
                                             </div>
                                             <div className="content">
                                                 <strong>Whatsapp:</strong>
-                                                <a href="mailto:info@validtheme.com">+54 9 11 3645-7906</a>
+                                                <a href="https://wa.me/5491136457906" target="_blank">+54 9 11 3645-7906</a>
                                             </div>
                                         </li>
                                     </ul>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div className="footer-bottom bg-dark text-light text-center">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <p>
-                                    Copyright &copy; {(new Date().getFullYear())} Anaton. All Rights Reserved
-                                </p>
-                            </div>
+                                </article>
+                            </address>
                         </div>
                     </div>
                 </div>
             </footer>
-        </>
+
     );
 };
 

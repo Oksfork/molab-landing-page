@@ -18,27 +18,27 @@
         "icon": "users.png",
         "iconDark": "users-light.png",
         "title": "Cobros y liquidaciones automáticas",
-        "category": "Gestión"
+        "category": "Control financiero"
     },
     {
         "id": 4,
         "icon": "creativity.png",
         "iconDark": "creativity-light.png",
         "title": "Trazabilidad completa",
-        "category": "Control"
+        "category": "Seguimiento"
     },
     {
         "id": 5,
         "icon": "cloud-lock.png",
         "iconDark": "cloud-lock-light.png",
         "title": "Reportes y exportación",
-        "category": "Gestión"
+        "category": "Metadata"
     },
     {
         "id": 6,
         "icon": "cloud-lock.png",
         "iconDark": "cloud-lock-light.png",
         "title": "Plataforma 24/7 en la nube",
-        "category": "Nube"
+        "category": "Acceso ilimitado"
     }
 ]

@@ -19,7 +19,10 @@ const HeaderV10 = ({ sectionClass }: DataType) => {
     return (
         <>
             <header>
-                <nav className={`navbar mobile-sidenav navbar-sticky navbar-default validnavs navbar-fixed  on menu-center no-full ${isMenuSticky ? "sticked" : "no-background"} ${sectionClass ? sectionClass : ""} ${isOpen ? "navbar-responsive" : ""}`}>
+                <nav 
+                    className={`navbar mobile-sidenav navbar-sticky navbar-default validnavs navbar-fixed  on menu-center no-full ${isMenuSticky ? "sticked" : "no-background"} ${sectionClass ? sectionClass : ""} ${isOpen ? "navbar-responsive" : ""}`}
+                    aria-label="Header de Molab.app - Software de gestión para laboratorios dentales"
+                >
                     <div className="container d-flex justify-content-between align-items-center">
 
                         {/* Navbar Header */}
@@ -28,7 +31,7 @@ const HeaderV10 = ({ sectionClass }: DataType) => {
                                 <i className="fa fa-bars" />
                             </button>
                             <Link className="navbar-brand" href="/">
-                                <Image src={molabLogo} className="logo" alt="Logo" />
+                                <Image src={molabLogo} className="logo" alt="Molab.app - Software de gestión para laboratorios dentales" />
                             </Link>
                         </div>
 
@@ -46,7 +49,9 @@ const HeaderV10 = ({ sectionClass }: DataType) => {
                             <div className="attr-nav">
                                 <ul>
                                     <li className="button">
-                                        <Link href="/contact-us">PRUEBA SIN COSTO</Link>
+                                        <Link href="https://wa.me/5491136457906" target="_blank"
+                                        aria-label="Solicitar prueba sin costo"
+                                        >PRUEBA SIN COSTO</Link>
                                     </li>
                                 </ul>
                             </div>

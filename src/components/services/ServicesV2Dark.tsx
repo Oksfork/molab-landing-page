@@ -3,7 +3,9 @@ import SingleServicesV2Dark from './SingleServicesV2Dark';
 
 const ServicesV2Dark = () => {
     return (
-            <section className="services-style-two-area dark-mode">
+            <section 
+                className="services-style-two-area dark-mode" 
+                aria-label="Ventajas de Molab.app - Software de gestión para laboratorios dentales">
                 <div className="container default-padding bottom-less">
                     <div className="row align-items-center mb-5">
                         <div className="col-lg-8">

@@ -3,7 +3,9 @@ import SinglePriceV3 from './SinglePriceV3';
 
 const PriceV3 = () => {
     return (
-            <section className="pricing-style-three-area overflow-hidden default-padding">
+            <section 
+                className="pricing-style-three-area overflow-hidden default-padding" 
+                aria-label="Precios de Molab.app - Software de gestión para laboratorios dentales">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8 offset-lg-2">

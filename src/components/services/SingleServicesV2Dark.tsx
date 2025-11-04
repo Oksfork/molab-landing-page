@@ -16,11 +16,12 @@ const SingleServicesV2Dark = ({ service, index }: { service: DataType, index?: n
     const animationDelay = (index || 0) * 0.1;
 
     return (
-        <div 
+        <article 
             className={`glassmorphism-card ${isHovered ? 'is-hovered' : ''}`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             style={{ animationDelay: `${animationDelay}s` }}
+            aria-label={`Ventaja ${index || 0} de Molab.app - Software de gestión para laboratorios dentales`}
         >
             <div className="glass-layer" />
             <div className="top-glow" />
@@ -41,12 +42,12 @@ const SingleServicesV2Dark = ({ service, index }: { service: DataType, index?: n
                             {category}
                         </span>
                     )}
-                    <p className="title-text">
+                    <h3 className="title-text">
                         {title}
-                    </p>
+                    </h3>
                 </div>
             </div>
-        </div>
+        </article>
     );
 };
 

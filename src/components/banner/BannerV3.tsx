@@ -12,6 +12,7 @@ const BannerV3 = ({ hasBg }: DataType) => {
 
     return (
             <section className="banner-style-three-area overflow-hidden"
+                aria-label="Intro Molab.app - Prueba sin costo"
                 style={{ backgroundImage: hasBg ? 'url(/assets/img/banner/trama_background_banner_1.png)' : "none" }}>
                 <div className="banner-shape-left-top" style={{ backgroundImage: 'url(/assets/img/shape/5.png)' }} />
                 <div className="banner-style-three">
@@ -39,7 +40,7 @@ const BannerV3 = ({ hasBg }: DataType) => {
                                         <div className="d-flex flex-row justify-content-center justify-content-lg-start">
                                         <Animate className="animate__animated animate__fadeInUp" delay="1200ms" duration="400ms">
                                             <div className="button mt-40">
-                                                <Link href="/contact-us" className="btn btn-sm btn-theme secondary">Prueba sin costo</Link>
+                                                <Link href="https://wa.me/5491136457906" target="_blank" aria-label="Solicitar prueba sin costo" className="btn btn-sm btn-theme secondary">Prueba sin costo</Link>
                                             </div>
                                         </Animate>    
                                         </div>

@@ -11,7 +11,8 @@ const ProcessV2 = () => {
     };
 
     return (
-        <section className="process-style-two-area custom-process-area default-padding bg-fixed overflow-hidden">
+        <section className="process-style-two-area custom-process-area default-padding bg-fixed overflow-hidden" 
+        aria-label="Cómo funciona Molab.app - Software de gestión para laboratorios dentales">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8 offset-lg-2">
@@ -38,16 +39,17 @@ const ProcessV2 = () => {
                     <div className="row">
                         {ProcessV2Data.map((process, index) =>
                             <div className="col-lg-3 col-12 mb-3" key={process.id}>
-                                <div
+                                <article
                                     className={`process-style-two ${activeServiceId === process.id ? 'active' : ''}`}
                                     onMouseEnter={() => handleMouseEnter(process.id)}
                                     style={{
                                         opacity: 0,
                                         animation: `fadeInUp 0.6s ease-out ${index * 0.15}s forwards`
                                     }}
+                                    aria-label={`Paso ${process.id} de ${ProcessV2Data.length} - ${process.title}`}
                                 >
                                     <SingleProcessV2 process={process} />
-                                </div>
+                                </article>
                             </div>
                         )}
                     </div>

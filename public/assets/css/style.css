@@ -4035,6 +4035,7 @@ button i {
 	margin: 0;
 	flex: 1;
 	transform: translateX(0);
+	font-size: 1.3rem;
 	transition: transform 0.3s ease;
 }
 
@@ -7351,6 +7352,7 @@ footer {
 	position: relative;
 	border-radius: 50%;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
 }
@@ -7492,6 +7494,81 @@ footer {
 /* ============================================================== 
     # 404 page
 =================================================================== */
+.error-page-area {
+	background-image: url(/assets/img/shape/42.png);
+	min-height: 80vh;
+	display: flex;
+	align-items: center;
+	padding: 100px 0;
+	position: relative;
+}
+
+.error-page-area .container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.error-page-area .error-box {
+	width: fit-content;
+	max-width: 800px;
+	background: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	border-radius: 20px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	position: relative;
+	overflow: hidden;
+}
+
+.error-page-area .error-box .glass-layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+	pointer-events: none;
+	z-index: 0;
+}
+
+.error-page-area .error-box > div {
+	position: relative;
+	z-index: 1;
+}
+
+.error-page-area .error-box h1 {
+	font-size: 120px;
+	font-weight: 900;
+	line-height: 1;
+	margin-bottom: 20px;
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.error-page-area .error-box h2 {
+	font-size: 32px;
+	font-weight: 600;
+	margin-bottom: 20px;
+	color: #fff;
+}
+
+.error-page-area .error-box p {
+	font-size: 18px;
+	color: rgba(255, 255, 255, 0.8);
+	margin-bottom: 40px;
+	line-height: 1.6;
+}
+
+.error-page-area .error-box .btn {
+	transition: all 0.3s ease;
+	min-width: 200px;
+}
+
 .error-page-area .shape-left {
 	position: absolute;
 	left: 0;
@@ -7520,21 +7597,19 @@ footer {
 	background-size: contain !important;
 }
 
-.error-box h1 {
-	font-size: 150px;
-	line-height: 110px;
-	font-weight: 700;
-	margin-bottom: 40px;
-	text-shadow: 3px 3px #ff8a43;
-}
-
-.error-box h2 {
-	font-weight: 600;
-	margin-bottom: 20px;
-}
-
-.error-box p {
-	padding: 0 10%;
+/* Mobile responsive for 404 */
+@media (max-width: 768px) {
+	.error-page-area .error-box h1 {
+		font-size: 80px;
+	}
+	
+	.error-page-area .error-box h2 {
+		font-size: 24px;
+	}
+	
+	.error-page-area .error-box p {
+		font-size: 16px;
+	}
 }
 
 
@@ -9475,13 +9550,13 @@ footer {
 		position: relative;
 	}
 
-	.process-style-two h4 {
+	.process-style-two h3 {
 		font-size: 18px;
 		margin-bottom: 8px;
 	}
 
 	/* Círculos del timeline vertical */
-	.process-style-two h4::before {
+	.process-style-two h3::before {
 		display: block !important;
 		left: -35px;
 		top: 5px;
@@ -9492,7 +9567,7 @@ footer {
 		animation: none !important;
 	}
 
-	.process-style-two h4::after {
+	.process-style-two h3::after {
 		display: block !important;
 		left: -25px;
 		top: 15px;
@@ -9501,7 +9576,7 @@ footer {
 		background: linear-gradient(135deg, var(--primary), var(--secondary));
 	}
 
-	.process-style-two.active h4::before {
+	.process-style-two.active header h3::before {
 		border: 2px solid var(--primary) !important;
 		background: linear-gradient(135deg, var(--primary), var(--secondary));
 		box-shadow: 0 0 15px rgba(60, 80, 224, 0.4);
@@ -9579,6 +9654,7 @@ footer {
 		padding: 18px !important;
 		gap: 12px;
 		flex-direction: row;
+		min-height: 300px;
 	}
 
 	.glassmorphism-card .icon-wrapper {
@@ -10090,14 +10166,14 @@ xclip
 	z-index: 1;
 }
 
-.process-style-two h4 {
+.process-style-two h3 {
 	font-weight: 600;
 	font-size: 24px;
 	margin-bottom: 20px;
 	position: relative;
 }
 
-.process-style-two h4::after {
+.process-style-two h3::after {
 	position: absolute;
 	left: -5px;
 	top: -129px;
@@ -10109,7 +10185,7 @@ xclip
 	border-radius: 50%;
 }
 
-.process-style-two h4::before {
+.process-style-two h3::before {
 	position: absolute;
 	left: -15px;
 	top: -139px;
@@ -10121,8 +10197,8 @@ xclip
 	border-radius: 50%;
 }
 
-.process-style-two.active h4::before,
-.process-style-two:hover h4::before {
+.process-style-two.active h3::before,
+.process-style-two:hover h3::before {
 	animation: spinner 10s infinite linear;
 	border: 2px dashed var(--white);
 }
@@ -10196,26 +10272,26 @@ xclip
 }
 
 /* Círculos con gradiente */
-.process-style-two h4::before {
+.process-style-two h3::before {
     border-color: var(--primary) !important;
     background: linear-gradient(135deg, rgba(60, 80, 224, 0.1), rgba(128, 202, 238, 0.1));
 }
 
-.process-style-two.active h4::before,
-.process-style-two:hover h4::before {
+.process-style-two.active h3::before,
+.process-style-two:hover h3::before {
     border: 2px solid var(--primary) !important;
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     box-shadow: 0 0 20px rgba(60, 80, 224, 0.4);
 }
 
 /* Punto interior con brillo */
-.process-style-two h4::after {
+.process-style-two h3::after {
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     box-shadow: 0 0 12px rgba(60, 80, 224, 0.6);
 }
 
-.process-style-two.active h4::after,
-.process-style-two:hover h4::after {
+.process-style-two.active h3::after,
+.process-style-two:hover h3::after {
     width: 22px;
     height: 22px;
     transition: all 0.3s ease;
@@ -10244,12 +10320,12 @@ xclip
 }
 
 /* Texto más legible */
-.process-style-two h4 {
+.process-style-two h3 {
     transition: color 0.3s ease;
 }
 
-.process-style-two:hover h4,
-.process-style-two.active h4 {
+.process-style-two:hover h3,
+.process-style-two.active h3 {
     color: var(--primary);
 }
 
@@ -10272,8 +10348,8 @@ xclip
     }
 }
 
-.process-style-two.active h4::before,
-.process-style-two:hover h4::before {
+.process-style-two.active h3::before,
+.process-style-two:hover h3::before {
     animation: spinner 10s infinite linear;
 }
 
@@ -10928,12 +11004,12 @@ a.video-play-button-standard {
 		left: 0;
 	}
 
-	.process-style-two h4::before {
+	.process-style-two h3::before {
 		left: -115px;
 		top: -10px;
 	}
 
-	.process-style-two h4::after {
+	.process-style-two h3::after {
 		left: -105px;
 		top: 0px;
 	}
@@ -11041,12 +11117,12 @@ a.video-play-button-standard {
 		left: 0;
 	}
 
-	.process-style-two h4::before {
+	.process-style-two h3::before {
 		left: -100px;
 		top: -10px;
 	}
 
-	.process-style-two h4::after {
+	.process-style-two h3::after {
 		left: -90px;
 		top: 0px;
 	}
@@ -11702,6 +11778,7 @@ body {
 
 .glassmorphism-card {
 	position: relative;
+	min-height: 140px;
 	background: rgba(255, 255, 255, 0.05);
 	backdrop-filter: blur(20px);
 	-webkit-backdrop-filter: blur(20px);
@@ -11822,7 +11899,7 @@ body {
 
 .glassmorphism-card .title-text {
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: 400;
 	line-height: 1.5;
 	margin: 0;
 	color: var(--white);

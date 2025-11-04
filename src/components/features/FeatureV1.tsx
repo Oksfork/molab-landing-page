@@ -11,6 +11,7 @@ const FeatureV1 = ({ hasBg, sectionClass }: DataType) => {
             <section 
                 className={`bg-contain-right-bottom p-4 overflow-hidden ${sectionClass ? sectionClass : ""}`}
                 style={{ backgroundImage: hasBg ? 'url(/assets/img/shape/12.png)' : "" }}
+                aria-label="Características de Molab.app - Software de gestión para laboratorios dentales"
             >
                 <div className="container">
                     <div className="relative">

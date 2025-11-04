@@ -10,7 +10,9 @@ const SingleProcessV2 = ({ process }: { process: DataType }) => {
 
     return (
         <>
-            <h4>{id}. {title}</h4>
+            <header>
+                <h3>{id}. {title}</h3>
+            </header>
             <p>{description}</p>
         </>
     );

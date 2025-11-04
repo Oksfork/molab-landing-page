@@ -1,4 +1,3 @@
-import BreadCrumb from "@/components/breadCrumb/BreadCrumb";
 import NotFoundContent from "@/components/notFound/NotFoundContent";
 import PagePatternWrapper from "@/components/layout/PagePatternWrapper";
 import HeaderV10 from "@/components/header/HeaderV10";

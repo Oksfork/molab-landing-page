@@ -3,6 +3,7 @@ import Image from "next/image";
 import SocialShareV1 from "../social/SocialShareV1";
 import { toast } from "react-toastify";
 import { useState } from "react";
+import { useReCaptcha } from "../utilities/ReCaptcha";
 
 import logo from "@/assets/img/logo.png"
 import logoBlue from "@/assets/img/logo-blue.png"
@@ -19,6 +20,8 @@ interface DataType {
 
 const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "";
+    const { executeRecaptcha } = useReCaptcha(siteKey);
 
     const handleForm: FormEventHandler = (event) => {
         event.preventDefault()
@@ -31,31 +34,43 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
         event.preventDefault();
         setIsSubmitting(true);
         
-        const form = event.target as HTMLFormElement;
-         const formData = new FormData(form);
-/*         const data = {
-             name: formData.get('name'),
-             email: formData.get('email'),
-             message: formData.get('message')
-         };
-*/
+        try {
+            // Ejecutar reCAPTCHA
+            const recaptchaToken = await executeRecaptcha("contact_form");
+            
+            if (!recaptchaToken) {
+                toast.error("Error al verificar reCAPTCHA. Por favor, intenta nuevamente.");
+                setIsSubmitting(false);
+                return;
+            }
 
+            const form = event.target as HTMLFormElement;
+            const formData = new FormData(form);
+            
+            // Agregar el token de reCAPTCHA al formData
+            formData.append("recaptcha_token", recaptchaToken);
 
-   await fetch("https://artecinvent.com/contact-smtp-molab.php", {
-      method: "POST",
-      body: formData,
-    });
+            // Enviar a la API route de Next.js que validará el reCAPTCHA
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                body: formData,
+            });
 
+            const data = await response.json();
 
-        // Simular envío (aquí puedes agregar tu lógica de API)
-        setTimeout(() => {
-            form.reset();
-            toast.success("Mensajee enviado correctamente. Te responderemos pronto!");
+            if (response.ok && data.success) {
+                form.reset();
+                toast.success("Mensaje enviado correctamente. Te responderemos pronto!");
+            } else {
+                toast.error(data.error || "Error al enviar el mensaje. Por favor, intenta nuevamente.");
+            }
+        } catch (error) {
+            console.error("Error al enviar formulario:", error);
+            toast.error("Error al enviar el mensaje. Por favor, intenta nuevamente.");
+        } finally {
             setIsSubmitting(false);
-        }, 1500);
+        }
     }
-
-    // Footer Logo Color
 
     let logoSrc;
     switch (logoColor) {

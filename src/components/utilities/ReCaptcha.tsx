@@ -50,6 +50,7 @@ export const useReCaptcha = (siteKey: string) => {
         });
       });
     } catch (error) {
+        console.log(error);
       return null;
     }
   }, [siteKey]);

@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Validar reCAPTCHA
-    const secretKey = process.env.NEXT_PUBLIC_RECAPTCHA_SECREY_KEY;
+    const secretKey = process.env.RECAPTCHA_SECRET_KEY;
     if (!secretKey) {
       console.error('RECAPTCHA_SECRET_KEY no está configurada');
       return NextResponse.json(

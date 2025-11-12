@@ -174,7 +174,7 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
                                             </div>
                                             <div className="content">
                                                 <strong>Comercial:</strong>
-                                                <a href="mailto:info@validtheme.com">contacto@contacto.com</a>
+                                                <a href="mailto:molabsystem@gmail.com">molabsystem@gmail.com</a>
                                             </div>
                                         </li>
                                         <li>
@@ -183,7 +183,7 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
                                             </div>
                                             <div className="content">
                                                 <strong>Soporte:</strong>
-                                                <a href="mailto:info@validtheme.com">soporte@soporte.com</a>
+                                                <a href="mailto:desarrolloartec@gmail.com">desarrolloartec@gmail.com</a>
                                             </div>
                                         </li>
                                         <li className="whatsapp-glass-item">

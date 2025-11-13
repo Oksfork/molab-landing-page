@@ -1,16 +1,20 @@
 "use client";
+import { useState } from "react";
 import Image from "next/image";
 import Animate from "../animation/Animate";
 import il1 from "@/assets/img/illustration/ill_with_pc.png";
 import Link from "next/link";
+import ModalVideo from "react-modal-video";
 
 interface DataType {
     hasBg?: boolean
 }
 
 const BannerV3 = ({ hasBg }: DataType) => {
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
+        <>
             <section className="banner-style-three-area overflow-hidden"
                 aria-label="Intro Molab.app - Prueba sin costo"
                 style={{ backgroundImage: hasBg ? 'url(/assets/img/banner/trama_background_banner_1.png)' : "none" }}>
@@ -37,12 +41,20 @@ const BannerV3 = ({ hasBg }: DataType) => {
                                             Moderno, ágil y accesible desde cualquier dispositivo.
                                             </p>
                                         </Animate>
-                                        <div className="d-flex flex-row justify-content-center justify-content-lg-start">
+                                        <div className="d-flex flex-row justify-content-center justify-content-lg-start gap-3">
+                                        <Animate className="animate__animated animate__fadeInUp" delay="1200ms" duration="400ms">
+                                            <div className="button mt-40">
+                                                <Link href="#" scroll={false} className="popup-youtube video-play-button with-text mt-20" onClick={() => setIsOpen(true)}>
+                                                    <div className="effect" />
+                                                    <span><i className="fas fa-play" /></span>
+                                                </Link>
+                                            </div>
+                                        </Animate>
                                         <Animate className="animate__animated animate__fadeInUp" delay="1200ms" duration="400ms">
                                             <div className="button mt-40">
                                                 <Link href="https://wa.me/5491136457906" target="_blank" aria-label="Solicitar prueba sin costo" className="btn btn-sm btn-theme secondary">Prueba sin costo</Link>
                                             </div>
-                                        </Animate>    
+                                        </Animate>
                                         </div>
                                     </div>
                                 </div>
@@ -58,6 +70,13 @@ const BannerV3 = ({ hasBg }: DataType) => {
                     </div>
                 </div>
             </section>
+            <ModalVideo
+                channel="youtube"
+                isOpen={isOpen}
+                videoId="mdO0JCx29NA"
+                onClose={() => setIsOpen(false)}
+            />
+        </>
     );
 };
 

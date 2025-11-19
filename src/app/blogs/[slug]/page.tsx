@@ -9,14 +9,14 @@ import BlogV1Data from '@/assets/jsonData/blog/BlogV1Data.json';
 import { Metadata } from "next";
 
 interface BlogPageProps {
-    params: {
+    params: Promise<{
         slug: string;
-    };
+    }>;
 }
 
 // Función para generar metadata dinámica
 export async function generateMetadata({ params }: BlogPageProps): Promise<Metadata> {
-        
+
     const { slug } = await params;
     const blog = BlogV1Data.find((b) => b.slug === slug);
 

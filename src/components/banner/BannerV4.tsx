@@ -32,7 +32,7 @@ const BannerV4 = () => {
                           Centralizá toda la operación en una sola plataforma, intuitiva y pensada para vos.
                         </p>
                         <Link 
-                          href="https://wa.me/5491136457906" 
+                          href="https://wa.me/5491173576766" 
                           className="price-v3-btn-glass effect"
                         >
                           <span>

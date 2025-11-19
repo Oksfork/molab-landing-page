@@ -43,7 +43,7 @@ const NotFoundContent = () => {
                                     </Link>
                                     <Link 
                                         className="btn btn-md btn-light" 
-                                        href="https://wa.me/5491136457906"
+                                        href="https://wa.me/5491173576766"
                                         target="_blank"
                                         aria-label="Contactar por WhatsApp"
                                     >

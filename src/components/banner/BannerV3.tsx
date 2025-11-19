@@ -52,7 +52,7 @@ const BannerV3 = ({ hasBg }: DataType) => {
                                         </Animate>
                                         <Animate className="animate__animated animate__fadeInUp" delay="1200ms" duration="400ms">
                                             <div className="button mt-40">
-                                                <Link href="https://wa.me/5491136457906" target="_blank" aria-label="Solicitar prueba sin costo" className="btn btn-sm btn-theme secondary">Prueba sin costo</Link>
+                                                <Link href="https://wa.me/5491173576766" target="_blank" aria-label="Solicitar prueba sin costo" className="btn btn-sm btn-theme secondary">Prueba sin costo</Link>
                                             </div>
                                         </Animate>
                                         </div>

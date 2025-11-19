@@ -13,7 +13,7 @@ interface DataType {
 const HeaderV10 = ({ sectionClass }: DataType) => {
 
     const isMenuSticky = useStickyMenu();
-    const { isOpen, openMenu } = useSidebarMenu();
+    const { isOpen, openMenu, closeMenu } = useSidebarMenu();
     // const toggleSubMenu = useSubMenuToggle();
 
     return (
@@ -35,28 +35,73 @@ const HeaderV10 = ({ sectionClass }: DataType) => {
                             </Link>
                         </div>
 
-                        {/* Menu Area */}
-                        {/* <div className={`collapse navbar-collapse collapse-mobile ${isOpen ? "show" : ""}`} id="navbar-menu">
-                            <Image src={logo} alt="Logo" />
-                            <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu" onClick={closeMenu}>
-                                <i className="fa fa-times" />
-                            </button>
-                            <MainMenu toggleSubMenu={toggleSubMenu} />
-                        </div> */}
+                        {/* Menu Area - Desktop */}
+                        <div className="navbar-nav d-none d-lg-flex align-items-center">
+                            <ul className="navbar-nav-list">
+                                <li>
+                                    <Link href="/" className="nav-link">Inicio</Link>
+                                </li>
+                                <li>
+                                    <Link href="/blogs" className="nav-link">Blog</Link>
+                                </li>
+                            </ul>
+                        </div>
 
                         {/* Header Right */}
                         <div className="attr-right">
                             <div className="attr-nav">
                                 <ul>
                                     <li className="button">
-                                        <Link href="https://wa.me/5491136457906" target="_blank"
+                                        <Link href="https://wa.me/5491173576766" target="_blank"
                                         aria-label="Solicitar prueba sin costo"
                                         >PRUEBA SIN COSTO</Link>
                                     </li>
                                 </ul>
                             </div>
-                            <div className={`overlay-screen ${isOpen ? "opened" : ""}`}></div>
+                            <div className={`overlay-screen ${isOpen ? "opened" : ""}`} onClick={closeMenu}></div>
                         </div>
+                    </div>
+
+                    {/* Mobile Sidebar Menu */}
+                    <div className={`mobile-sidebar ${isOpen ? "opened" : ""}`}>
+                        <div className="mobile-sidebar-header">
+                            <Link className="mobile-sidebar-logo" href="/" onClick={closeMenu}>
+                                <Image src={molabLogo} className="logo" alt="Molab.app" />
+                            </Link>
+                            <button 
+                                type="button" 
+                                className="mobile-sidebar-close" 
+                                onClick={closeMenu}
+                                aria-label="Cerrar menú"
+                            >
+                                <i className="fa fa-times" />
+                            </button>
+                        </div>
+                        <nav className="mobile-sidebar-nav">
+                            <ul className="mobile-sidebar-menu">
+                                <li>
+                                    <Link href="/" className="mobile-sidebar-link" onClick={closeMenu}>
+                                        <i className="fas fa-home" /> Inicio
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/blogs" className="mobile-sidebar-link" onClick={closeMenu}>
+                                        <i className="fas fa-blog" /> Blog
+                                    </Link>
+                                </li>
+                                <li className="mobile-sidebar-button">
+                                    <Link 
+                                        href="https://wa.me/5491173576766" 
+                                        target="_blank"
+                                        className="btn btn-sm btn-theme secondary"
+                                        onClick={closeMenu}
+                                        aria-label="Solicitar prueba sin costo"
+                                    >
+                                        Prueba sin costo
+                                    </Link>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </nav>
             </header>

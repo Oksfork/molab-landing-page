@@ -1,167 +1,70 @@
 [
     {
+      "id": 1,
+      "slug": "como-instalar-termica",
+      
+      "title": "Guía de instalacion PlugIn impresora termica",
+      "excerpt": "Aprende a instalar MolabPrinter paso a paso. Conectá tu impresora térmica con el sistema MOLAB y automatizá tus impresiones de comprobantes y órdenes.",
+      "quote": "MolabPrinter permite que el sistema MOLAB se conecte con impresoras térmicas instaladas en tu computadora.",
+      
+      "content": "<h2>Tutorial de instalación del componente MolabPrinter</h2><p>MolabPrinter es un componente que permite que el sistema MOLAB se conecte con impresoras térmicas instaladas en tu computadora.</p><p>Seguí estos pasos para instalarlo correctamente.</p><h3>✅ Paso 1 — Seleccionar el idioma de instalación</h3><p>Al ejecutar el instalador, primero aparecerá la ventana para elegir el idioma.</p><p><strong>📌 Seleccioná Español en el menú desplegable y hacé clic en Aceptar.</strong></p><h3>✅ Paso 2 — Elegir la carpeta de instalación</h3><p>Luego, el instalador te pedirá seleccionar la carpeta destino.</p><p><strong>📌 Dejá la ruta recomendada: C:\\Program Files\\MolabPrinter</strong></p><p>Después hacé clic en Siguiente.</p><h3>✅ Paso 3 — Personalizar el nombre de la aplicación (opcional)</h3><p>En esta pantalla podés indicar el nombre con el que aparecerá la aplicación en tu sistema.</p><p><strong>📌 Recomendación: dejá el nombre por defecto MolabPrinter.</strong></p><p>Hacé clic en Siguiente.</p><h3>✅ Paso 4 — Selección de logo (opcional)</h3><p>En caso de que quieras usar un logo personalizado en MolabPrinter, podés seleccionarlo acá.</p><p><strong>📌 Formato recomendado: Imagen PNG de 305 px de ancho × 110 px de alto.</strong></p><p>Si no elegís ninguno, se usará el logo del sistema por defecto.<br>Si no necesitas cambiar nada, simplemente hacé clic en Siguiente.</p><h3>✅ Paso 5 — Completar datos de contacto</h3><p>En esta sección se cargan datos administrativos del laboratorio.</p><p>Completá los siguientes campos:</p><ul><li><strong>Contacto Técnico:</strong> persona responsable de soporte.</li><li><strong>Contacto de Laboratorio:</strong> contacto interno o administrativo.</li><li><strong>Día del mes en donde vence Ctas/Ctes:</strong> usado para recordatorios de cuenta corriente.</li></ul><p>Cuando completes todo, presioná Siguiente.</p><h3>✅ Paso 6 — Seleccionar la carpeta del Menú Inicio</h3><p>Esta pantalla define dónde aparecerán los accesos directos dentro del menú Inicio de Windows.</p><p><strong>📌 Podés dejar la opción predeterminada: MolabPrinter.</strong></p><p>Hacé clic en Siguiente.</p><h3>✅ Paso 7 — Confirmación final</h3><p>El instalador mostrará un resumen de los datos antes de iniciar.</p><p><strong>📌 Si todo está correcto, hacé clic en Instalar para comenzar.</strong></p><h3>✅ Paso 8 — Instalación completa</h3><p>Cuando el proceso finalice, verás el siguiente mensaje: \"Completando la instalación de MolabPrinter\"</p><p><strong>📌 Presioná Finalizar.</strong></p><h3>🎉 ¡Listo! MolabPrinter ya está instalado</h3><p>Ahora vas a poder:</p><ul><li>Conectar MolabPrinter al sistema MOLAB.</li><li>Enviar comprobantes e impresiones a tu impresora térmica automáticamente.</li><li>Ejecutar la aplicación desde el acceso directo que se creó en tu computadora.</li></ul>",
+      "readTime": 8,
+      
+      "publishedAt": "2025-04-25T10:00:00Z",
+      "updatedAt": "2025-04-25T10:00:00Z",
+      "createdAt": "2025-04-20T10:00:00Z",
+      
+      "status": "published",
+      "featured": true,
+      "pinned": false,
+      
+      "category": {
         "id": 1,
-        "author": "Md Sohag",
-        "date": "25 April, 2025",
-        "title": "Miscovery incommode earnestly commanded if.",
-        "title2": "Miscovery incommode earnestly commanded temparing task.",
-        "title3": "Miscovery incommode earnestly is commanded",
-        "text": "Bndulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now",
-        "thumb": "1.jpg",
-        "thumbFull": "1-full.jpg"
-    },
-    {
-        "id": 2,
-        "author": "Md Sohag",
-        "date": "25 April, 2025",
-        "title": "Expression acceptance imprudence particular",
-        "title2": "Expression acceptance imprudence particular in mentions.",
-        "title3": "Expression acceptance imprudence in mentions.",
-        "text": "Bndulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now",
-        "thumb": "2.jpg",
-        "thumbFull": "2-full.jpg"
-    },
-    {
-        "id": 3,
-        "author": "Md Sohag",
-        "date": "25 April, 2025",
-        "title": "Considered imprudence of technical friendship.",
-        "title2": "Considered imprudence of technical friendship at the situation.",
-        "title3": "Considered imprudence of technical friendship.",
-        "text": "Bndulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now",
-        "thumb": "3.jpg",
-        "thumbFull": "3-full.jpg"
-    },
-    {
-        "id": 4,
-        "author": "Md Sohag",
-        "date": "25 April, 2025",
-        "title": "Miscovery incommode earnestly commanded if.",
-        "title2": "Considered imprudence of technical friendship at the situation.",
-        "title3": "Miscovery incommode earnestly is commanded",
-        "text": "Bndulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now",
-        "thumb": "4.jpg",
-        "thumbFull": "4-full.jpg"
-    },
-    {
-        "id": 5,
-        "author": "Md Sohag",
-        "date": "25 April, 2025",
-        "title": "Expression acceptance imprudence particular",
-        "title2": "Expression acceptance imprudence particular",
-        "title3": "Expression acceptance imprudence in mentions.",
-        "text": "Bndulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now",
-        "thumb": "5.jpg",
-        "thumbFull": "5-full.jpg"
-    },
-    {
-        "id": 6,
-        "author": "Md Sohag",
-        "date": "25 April, 2025",
-        "title": "Considered imprudence of technical friendship.",
-        "title2": "Considered imprudence of technical friendship.",
-        "title3": "Considered imprudence of technical friendship.",
-        "text": "Bndulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now",
-        "thumb": "6.jpg",
-        "thumbFull": "6-full.jpg"
-    },
-    {
-        "id": 7,
-        "author": "Md Sohag",
-        "date": "25 April, 2025",
-        "title": "Expression acceptance imprudence particular",
-        "title2": "Expression acceptance imprudence particular",
-        "title3": "Expression acceptance imprudence in mentions.",
-        "text": "Bndulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now",
-        "thumb": "5.jpg",
-        "thumbFull": "5-full.jpg"
-    },
-    {
-        "id": 8,
-        "author": "Md Sohag",
-        "date": "25 April, 2025",
-        "title": "Miscovery incommode earnestly commanded if.",
-        "title2": "Considered imprudence of technical friendship at the situation.",
-        "title3": "Miscovery incommode earnestly is commanded",
-        "text": "Bndulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now",
-        "thumb": "4.jpg",
-        "thumbFull": "4-full.jpg"
-    },
-    {
-        "id": 9,
-        "author": "Md Sohag",
-        "date": "25 April, 2025",
-        "title": "Considered imprudence of technical friendship.",
-        "title2": "Considered imprudence of technical friendship at the situation.",
-        "title3": "Considered imprudence of technical friendship.",
-        "text": "Bndulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now",
-        "thumb": "3.jpg",
-        "thumbFull": "3-full.jpg"
-    },
-    {
-        "id": 10,
-        "author": "Md Sohag",
-        "date": "25 April, 2025",
-        "title": "Expression acceptance imprudence particular",
-        "title2": "Expression acceptance imprudence particular in mentions.",
-        "title3": "Expression acceptance imprudence in mentions.",
-        "text": "Bndulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now",
-        "thumb": "2.jpg",
-        "thumbFull": "2-full.jpg"
-    },
-    {
-        "id": 11,
-        "author": "Md Sohag",
-        "date": "25 April, 2025",
-        "title": "Miscovery incommode earnestly commanded if.",
-        "title2": "Miscovery incommode earnestly commanded temparing task.",
-        "title3": "Miscovery incommode earnestly is commanded",
-        "text": "Bndulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now",
-        "thumb": "1.jpg",
-        "thumbFull": "1-full.jpg"
-    },
-    {
-        "id": 12,
-        "author": "Md Sohag",
-        "date": "25 April, 2025",
-        "title": "Expression acceptance imprudence particular",
-        "title2": "Expression acceptance imprudence particular",
-        "title3": "Expression acceptance imprudence in mentions.",
-        "text": "Bndulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now",
-        "thumb": "5.jpg",
-        "thumbFull": "5-full.jpg"
-    },
-    {
-        "id": 13,
-        "author": "Md Sohag",
-        "date": "25 April, 2025",
-        "title": "Miscovery incommode earnestly commanded if.",
-        "title2": "Considered imprudence of technical friendship at the situation.",
-        "title3": "Miscovery incommode earnestly is commanded",
-        "text": "Bndulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now",
-        "thumb": "4.jpg",
-        "thumbFull": "4-full.jpg"
-    },
-    {
-        "id": 14,
-        "author": "Md Sohag",
-        "date": "25 April, 2025",
-        "title": "Considered imprudence of technical friendship.",
-        "title2": "Considered imprudence of technical friendship at the situation.",
-        "title3": "Considered imprudence of technical friendship.",
-        "text": "Bndulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now",
-        "thumb": "3.jpg",
-        "thumbFull": "3-full.jpg"
-    },
-    {
-        "id": 15,
-        "author": "Md Sohag",
-        "date": "25 April, 2025",
-        "title": "Considered imprudence of technical friendship.",
-        "title2": "Considered imprudence of technical friendship.",
-        "title3": "Considered imprudence of technical friendship.",
-        "text": "Bndulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now",
-        "thumb": "6.jpg",
-        "thumbFull": "6-full.jpg"
+        "name": "Guías",
+        "slug": "guias"
+      },
+      "tags": [
+        {
+          "id": 1,
+          "name": "Instalación",
+          "slug": "instalacion"
+        },
+        {
+          "id": 2,
+          "name": "Instalación",
+          "slug": "instalacion"
+        }
+      ],
+      
+      "author": {
+        "id": 1,
+        "name": "Molab.app",
+        "slug": "molab.app",
+        "avatar": "/assets/img/team/molabapp_user_logo.png",
+        "bio": "Soporte Técnico",
+        "role": "Editor Principal"
+      },
+      "images": {
+        "thumbnail": "/assets/img/blog/1.jpg",
+        "featured": "/assets/img/blog/1-full.jpg",
+        "ogImage": "/assets/img/blog/1-og.jpg"
+      },
+      "seo": {
+        "metaTitle": "Guía de Gestión Dental | Molab.app",
+        "metaDescription": "Descubre las mejores prácticas...",
+        "keywords": ["gestión dental", "laboratorio", "productividad"],
+        "canonical": "https://molab.app/blogs/guia-gestion-laboratorio-dental"
+      },
+      "stats": {
+        "views": 1250,
+        "likes": 45,
+        "shares": 12
+      },
+      "relatedPosts": [2, 5, 8], 
+      "metadata": {
+        "difficulty": "intermediate",
+        "language": "es",
+        "version": "1.0"
+      }
     }
 ]

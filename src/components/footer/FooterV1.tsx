@@ -192,7 +192,7 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
                                             </div>
                                             <div className="content">
                                                 <strong>Whatsapp:</strong>
-                                                <a href="https://wa.me/5491136457906" target="_blank">+54 9 11 3645-7906</a>
+                                                <a href="https://wa.me/5491173576766" target="_blank">+54 9 11 7357-6766</a>
                                             </div>
                                         </li>
                                     </ul>

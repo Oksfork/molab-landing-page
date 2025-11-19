@@ -62,7 +62,7 @@ const SinglePriceV3 = ({ plan }: { plan: DataType }) => {
                     <h2 className="price-value">
                         <sup>$</sup>{price} <sub>/ {billing_cycle}</sub>
                     </h2>
-                    <Link className={`btn mt-25 btn-sm effect ${btnClass}`} href="https://wa.me/5491136457906" target="_blank" aria-label="Solicitar prueba sin costo">
+                    <Link className={`btn mt-25 btn-sm effect ${btnClass}`} href="https://wa.me/5491173576766" target="_blank" aria-label="Solicitar prueba sin costo">
                         Purchase Plan
                     </Link>
                 </div>

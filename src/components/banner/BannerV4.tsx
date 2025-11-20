@@ -32,11 +32,11 @@ const BannerV4 = () => {
                           Centralizá toda la operación en una sola plataforma, intuitiva y pensada para vos.
                         </p>
                         <Link 
-                          href="https://wa.me/5491173576766?text=Hola,%20quiero%20saber%20mas%20sobre%20MOLAB" 
+                          href="https://wa.me/5491173576766?text=Hola,%20quiero%20saber%20los%20costos%20de%20suscripcion%20a%20MOLAB" 
                           className="price-v3-btn-glass effect"
                         >
                           <span>
-                            Consultá tu plan a medida{' '}
+                          Obtené la promo lanzamiento{' '}
                             <i className="fas fa-arrow-right ms-10" />
                           </span>
                         </Link>

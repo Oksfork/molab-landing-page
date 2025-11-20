@@ -127,7 +127,7 @@ const BlogDetail = ({ blog, relatedBlogs = [] }: BlogDetailProps) => {
                 )} */}
 
                 {/* Quote destacada */}
-                {blog.quote && (
+                {/* {blog.quote && (
                     <div className="blog-quote-highlight mb-5">
                         <div className="quote-icon-large">
                             <i className="fas fa-quote-left" />
@@ -136,7 +136,7 @@ const BlogDetail = ({ blog, relatedBlogs = [] }: BlogDetailProps) => {
                             {blog.quote}
                         </blockquote>
                     </div>
-                )}
+                )} */}
 
                 {/* Botón de descarga para MolabPrinter */}
                 {blog.slug === 'como-instalar-termica' && (

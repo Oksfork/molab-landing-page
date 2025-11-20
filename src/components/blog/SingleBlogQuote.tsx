@@ -60,13 +60,13 @@ const SingleBlogQuote = ({ blog, index }: { blog: BlogQuoteType, index?: number 
                 )} */}
                 
                 <div className="quote-content">
-                    <div className="quote-icon">
+                    {/* <div className="quote-icon">
                         <i className="fas fa-quote-left" />
                     </div>
                     
                     <blockquote className="quote-text">
                         {displayQuote}
-                    </blockquote>
+                    </blockquote> */}
                     
                     <div className="quote-meta">
                         <Link href={`/blogs/${blog.slug}`}>

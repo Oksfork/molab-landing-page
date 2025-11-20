@@ -42,7 +42,7 @@ const HeaderV10 = ({ sectionClass }: DataType) => {
                                     <Link href="/" className="nav-link">Inicio</Link>
                                 </li>
                                 <li>
-                                    <Link href="/blogs" className="nav-link">Blog</Link>
+                                    <Link href="/blogs" className="nav-link">Recursos</Link>
                                 </li>
                             </ul>
                         </div>
@@ -52,7 +52,7 @@ const HeaderV10 = ({ sectionClass }: DataType) => {
                             <div className="attr-nav">
                                 <ul>
                                     <li className="button">
-                                        <Link href="https://wa.me/5491173576766" target="_blank"
+                                        <Link href="https://wa.me/5491173576766?text=Hola,%20quiero%20probar%20la%20demo%20de%20MOLAB" target="_blank"
                                         aria-label="Solicitar prueba sin costo"
                                         >PRUEBA SIN COSTO</Link>
                                     </li>
@@ -91,7 +91,7 @@ const HeaderV10 = ({ sectionClass }: DataType) => {
                                 </li>
                                 <li className="mobile-sidebar-button">
                                     <Link 
-                                        href="https://wa.me/5491173576766" 
+                                        href="https://wa.me/5491173576766?text=Hola,%20quiero%20probar%20la%20demo%20de%20MOLAB" 
                                         target="_blank"
                                         className="btn btn-sm btn-theme secondary"
                                         onClick={closeMenu}

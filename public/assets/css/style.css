@@ -15923,6 +15923,21 @@ button.Toastify__close-button {
 	color: var(--secondary);
 }
 
+.blog-detail-content img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 12px;
+	margin: 25px 0;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+	display: block;
+	transition: transform 0.3s ease;
+}
+
+.blog-detail-content img:hover {
+	transform: scale(1.02);
+	box-shadow: 0 6px 20px rgba(60, 80, 224, 0.2);
+}
+
 .blog-tags {
 	display: flex;
 	align-items: center;

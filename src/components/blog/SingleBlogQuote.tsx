@@ -28,7 +28,7 @@ const SingleBlogQuote = ({ blog, index }: { blog: BlogQuoteType, index?: number 
     
     // Manejar estructura nueva y antigua
     const authorName = typeof blog.author === 'string' ? blog.author : blog.author.name;
-    const displayQuote = blog.quote || blog.excerpt || blog.text || '';
+    // const displayQuote = blog.quote || blog.excerpt || blog.text || '';
     const displayDate = blog.publishedAt 
         ? new Date(blog.publishedAt).toLocaleDateString('es-AR', { year: 'numeric', month: 'long', day: 'numeric' })
         : blog.date || '';

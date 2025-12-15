@@ -151,8 +151,8 @@ const BlogDetail = ({ blog, relatedBlogs = [] }: BlogDetailProps) => {
                                     Descargá el instalador de MolabPrinter para comenzar con la instalación.
                                 </p>
                                 <a 
-                                    href="/resources/MolabPrinterInstaller.exe"
-                                    download="MolabPrinterInstaller.exe"
+                                    href="/resources/Molab_Printer_Setup.exe"
+                                    download="Molab_Printer_Setup.exe"
                                     className="btn btn-theme blog-download-btn"
                                 >
                                     <i className="fas fa-download" /> Descargar Instalador

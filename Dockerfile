@@ -1,20 +1,36 @@
+FROM node:20-alpine AS deps
+WORKDIR /app
+RUN apk add --no-cache libc6-compat
+COPY package*.json ./
+RUN npm ci --include=dev --legacy-peer-deps
+
+FROM node:20-alpine AS builder
+WORKDIR /app
+ENV NODE_ENV=production
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+RUN npm run build
+
 FROM node:20-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production
-ENV PORT=3090
+ENV PORT=3000
 ENV NEXT_TELEMETRY_DISABLED=1
 
 RUN apk add --no-cache libc6-compat
 
+# crear usuario
 RUN addgroup -S nextjs && adduser -S nextjs -G nextjs
 
+# copiar build
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 
+# 🔥 FIX permisos
 RUN chown -R nextjs:nextjs /app
 
 USER nextjs
 
-EXPOSE 3090
+EXPOSE 3000
 CMD ["node", "server.js"]

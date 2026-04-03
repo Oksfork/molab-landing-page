@@ -2,8 +2,8 @@
 import Image from "next/image";
 import SocialShareV1 from "../social/SocialShareV1";
 import { toast } from "react-toastify";
-import { useState } from "react";
-import { useReCaptcha } from "../utilities/ReCaptcha";
+import { useState, useRef, useCallback } from "react";
+import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 
 import logo from "@/assets/img/logo.png"
 import logoBlue from "@/assets/img/logo-blue.png"
@@ -20,8 +20,14 @@ interface DataType {
 
 const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "";
-    const { executeRecaptcha } = useReCaptcha(siteKey);
+    const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+    const turnstileRef = useRef<TurnstileInstance | undefined>(undefined);
+    const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "";
+
+    const clearTurnstile = useCallback(() => {
+        setTurnstileToken(null);
+        turnstileRef.current?.reset();
+    }, []);
 
     const handleForm: FormEventHandler = (event) => {
         event.preventDefault()
@@ -32,25 +38,24 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
 
     const handleContactForm = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        setIsSubmitting(true);
-        
-        try {
-            // Ejecutar reCAPTCHA
-            const recaptchaToken = await executeRecaptcha("contact_form");
-            
-            if (!recaptchaToken) {
-                toast.error("Error al verificar reCAPTCHA. Por favor, intenta nuevamente.");
-                setIsSubmitting(false);
-                return;
-            }
 
+        if (!siteKey) {
+            toast.error("El formulario de contacto no está configurado correctamente.");
+            return;
+        }
+
+        if (!turnstileToken) {
+            toast.error("Completa la verificación de seguridad antes de enviar.");
+            return;
+        }
+
+        setIsSubmitting(true);
+
+        try {
             const form = event.target as HTMLFormElement;
             const formData = new FormData(form);
-            
-            // Agregar el token de reCAPTCHA al formData
-            formData.append("recaptcha_token", recaptchaToken);
+            formData.append("turnstile_token", turnstileToken);
 
-            // Enviar a la API route de Next.js que validará el reCAPTCHA
             const response = await fetch("/api/contact", {
                 method: "POST",
                 body: formData,
@@ -60,13 +65,16 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
 
             if (response.ok && data.success) {
                 form.reset();
+                clearTurnstile();
                 toast.success("Mensaje enviado correctamente. Te responderemos pronto!");
             } else {
                 toast.error(data.error || "Error al enviar el mensaje. Por favor, intenta nuevamente.");
+                clearTurnstile();
             }
         } catch (error) {
             console.error("Error al enviar formulario:", error);
             toast.error("Error al enviar el mensaje. Por favor, intenta nuevamente.");
+            clearTurnstile();
         } finally {
             setIsSubmitting(false);
         }
@@ -154,6 +162,20 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
                                                 required
                                             ></textarea>
                                         </div>
+                                        {siteKey ? (
+                                            <div className="form-group">
+                                                <Turnstile
+                                                    ref={turnstileRef}
+                                                    siteKey={siteKey}
+                                                    onSuccess={setTurnstileToken}
+                                                    onExpire={clearTurnstile}
+                                                    onError={() => {
+                                                        setTurnstileToken(null);
+                                                    }}
+                                                    options={{ theme: "dark" }}
+                                                />
+                                            </div>
+                                        ) : null}
                                         <button type="submit" className="btn btn-primary w-100 btn-sm" disabled={isSubmitting}>
                                             {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
                                         </button>

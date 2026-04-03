@@ -1,113 +1,156 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from "next/server";
 
-interface RecaptchaResponse {
+interface TurnstileVerifyResponse {
   success: boolean;
-  score: number;
-  action: string;
+  "error-codes"?: string[];
   challenge_ts?: string;
   hostname?: string;
-  'error-codes'?: string[];
+}
+
+function getClientIp(request: NextRequest): string | undefined {
+  const forwarded = request.headers.get("x-forwarded-for");
+  if (forwarded) {
+    return forwarded.split(",")[0]?.trim() || undefined;
+  }
+  return request.headers.get("x-real-ip") || undefined;
+}
+
+async function verifyTurnstileToken(
+  token: string,
+  secret: string,
+  remoteip?: string
+): Promise<TurnstileVerifyResponse> {
+  const body = new URLSearchParams({
+    secret,
+    response: token,
+  });
+  if (remoteip) {
+    body.set("remoteip", remoteip);
+  }
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 15_000);
+
+  try {
+    const res = await fetch(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body,
+        signal: controller.signal,
+      }
+    );
+    clearTimeout(timeout);
+
+    if (!res.ok) {
+      return { success: false, "error-codes": ["internal-error"] };
+    }
+
+    return (await res.json()) as TurnstileVerifyResponse;
+  } catch {
+    clearTimeout(timeout);
+    return { success: false, "error-codes": ["internal-error"] };
+  }
 }
 
 export async function POST(request: NextRequest) {
   try {
     const formData = await request.formData();
-    
-    const name = formData.get('name') as string;
-    const email = formData.get('email') as string;
-    const message = formData.get('message') as string;
-    const recaptchaToken = formData.get('recaptcha_token') as string;
 
-    if (!name || !email || !message || !recaptchaToken) {
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const message = formData.get("message") as string;
+    const turnstileToken = formData.get("turnstile_token") as string;
+
+    if (!name || !email || !message || !turnstileToken) {
       return NextResponse.json(
-        { error: 'Todos los campos son requeridos' },
+        { error: "Todos los campos son requeridos" },
         { status: 400 }
       );
     }
 
-    // Validar reCAPTCHA
-    const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+    const secretKey = process.env.TURNSTILE_SECRET_KEY;
     if (!secretKey) {
-      console.error('RECAPTCHA_SECRET_KEY no está configurada');
+      console.error("TURNSTILE_SECRET_KEY no está configurada");
       return NextResponse.json(
-        { error: 'Error de configuración del servidor' },
+        { error: "Error de configuración del servidor" },
         { status: 500 }
       );
     }
 
-    // Verificar el token con Google
-    const recaptchaUrl = 'https://www.google.com/recaptcha/api/siteverify';
-    const recaptchaResponse = await fetch(recaptchaUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: new URLSearchParams({
-        secret: secretKey,
-        response: recaptchaToken,
-      }),
-    });
+    const verify = await verifyTurnstileToken(
+      turnstileToken,
+      secretKey,
+      getClientIp(request)
+    );
 
-    const recaptchaData: RecaptchaResponse = await recaptchaResponse.json();
-
-    // Validar el resultado de reCAPTCHA
-    if (!recaptchaData.success) {
-      console.error('reCAPTCHA validation failed:', recaptchaData['error-codes']);
+    if (!verify.success) {
+      console.error(
+        "Turnstile validation failed:",
+        verify["error-codes"] ?? []
+      );
       return NextResponse.json(
-        { error: 'Verificación reCAPTCHA fallida. Por favor, intenta nuevamente.' },
+        {
+          error:
+            "Verificación de seguridad fallida. Por favor, intenta nuevamente.",
+        },
         { status: 400 }
       );
     }
 
-    // Validar el score (recomendado: >= 0.5)
-    const minScore = parseFloat(process.env.RECAPTCHA_MIN_SCORE || '0.5');
-    if (recaptchaData.score < minScore) {
-      console.warn(`reCAPTCHA score too low: ${recaptchaData.score} (minimum: ${minScore})`);
-      return NextResponse.json(
-        { error: 'Actividad sospechosa detectada. Por favor, intenta nuevamente.' },
-        { status: 400 }
-      );
-    }
+    const phpEndpoint =
+      process.env.CONTACT_PHP_ENDPOINT ||
+      "https://artecinvent.com/contact-smtp-molab.php";
 
-    // Si todo está bien, reenviar los datos al PHP
-    const phpEndpoint = process.env.CONTACT_PHP_ENDPOINT || 'https://artecinvent.com/contact-smtp-molab.php';
-    
     const phpFormData = new FormData();
-    phpFormData.append('name', name);
-    phpFormData.append('email', email);
-    phpFormData.append('message', message);
-    // Opcional: también enviar el score para logging en el PHP
-    phpFormData.append('recaptcha_score', recaptchaData.score.toString());
+    phpFormData.append("name", name);
+    phpFormData.append("email", email);
+    phpFormData.append("message", message);
 
-    const phpResponse = await fetch(phpEndpoint, {
-      method: 'POST',
-      body: phpFormData,
-    });
+    const phpController = new AbortController();
+    const phpTimeout = setTimeout(() => phpController.abort(), 30_000);
+
+    let phpResponse: Response;
+    try {
+      phpResponse = await fetch(phpEndpoint, {
+        method: "POST",
+        body: phpFormData,
+        signal: phpController.signal,
+      });
+    } catch {
+      clearTimeout(phpTimeout);
+      return NextResponse.json(
+        { error: "Error al procesar el formulario. Por favor, intenta nuevamente." },
+        { status: 503 }
+      );
+    }
+    clearTimeout(phpTimeout);
 
     if (!phpResponse.ok) {
-      console.error('Error al enviar al PHP:', phpResponse.status, phpResponse.statusText);
+      console.error(
+        "Error al enviar al PHP:",
+        phpResponse.status,
+        phpResponse.statusText
+      );
       return NextResponse.json(
-        { error: 'Error al procesar el formulario. Por favor, intenta nuevamente.' },
+        { error: "Error al procesar el formulario. Por favor, intenta nuevamente." },
         { status: 500 }
       );
     }
 
-    // Retornar éxito
     return NextResponse.json(
-      { 
-        success: true, 
-        message: 'Mensaje enviado correctamente',
-        score: recaptchaData.score
+      {
+        success: true,
+        message: "Mensaje enviado correctamente",
       },
       { status: 200 }
     );
-
   } catch (error) {
-    console.error('Error en API route:', error);
+    console.error("Error en API route:", error);
     return NextResponse.json(
-      { error: 'Error interno del servidor' },
+      { error: "Error interno del servidor" },
       { status: 500 }
     );
   }
 }
-

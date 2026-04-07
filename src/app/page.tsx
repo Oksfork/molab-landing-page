@@ -64,18 +64,18 @@ export default function HomePage() {
 
   return (
     <PagePatternWrapper>
-    <JsonLd data={breadcrumbSchema} />
-    <HeaderV10 sectionClass="dark"></HeaderV10>
-    <main>
-        <BannerV3 hasBg={false}></BannerV3>
-        <FeatureV1 />
-        <ProcessV2 />
-        <ServicesV2Dark></ServicesV2Dark>
-        <PriceV3 />
-        <BannerV4 />
-    </main>
-    <FooterV1 logoColor="light" />
-    <DarkClass />
-</PagePatternWrapper>
+        <JsonLd data={breadcrumbSchema} />
+        <HeaderV10 sectionClass="dark"></HeaderV10>
+        <main>
+            <BannerV3 hasBg={false}></BannerV3>
+            <FeatureV1 />
+            <ProcessV2 />
+            <ServicesV2Dark></ServicesV2Dark>
+            <PriceV3 />
+            <BannerV4 />
+        </main>
+        <FooterV1 logoColor="light" />
+        <DarkClass />
+    </PagePatternWrapper>
   );
 }

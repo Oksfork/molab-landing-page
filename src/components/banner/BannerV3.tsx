@@ -5,6 +5,7 @@ import Animate from "../animation/Animate";
 import il1 from "@/assets/img/illustration/ill_with_pc.png";
 import Link from "next/link";
 import ModalVideo from "react-modal-video";
+import TrialModal from "../modals/TrialModal";
 
 interface DataType {
     hasBg?: boolean
@@ -12,6 +13,7 @@ interface DataType {
 
 const BannerV3 = ({ hasBg }: DataType) => {
     const [isOpen, setIsOpen] = useState(false);
+    const [trialOpen, setTrialOpen] = useState(false);
 
     return (
         <>
@@ -52,7 +54,14 @@ const BannerV3 = ({ hasBg }: DataType) => {
                                         </Animate>
                                         <Animate className="animate__animated animate__fadeInUp" delay="1200ms" duration="400ms">
                                             <div className="button mt-40">
-                                                <Link href="https://wa.me/5491173576766?text=Hola,%20quiero%20probar%20la%20demo%20de%20MOLAB" target="_blank" aria-label="Solicitar prueba sin costo" className="btn btn-sm btn-theme secondary">Prueba sin costo</Link>
+                                                <button
+                                                    type="button"
+                                                    aria-label="Solicitar prueba sin costo"
+                                                    className="btn btn-sm btn-theme secondary"
+                                                    onClick={() => setTrialOpen(true)}
+                                                >
+                                                    Prueba sin costo
+                                                </button>
                                             </div>
                                         </Animate>
                                         </div>
@@ -76,6 +85,7 @@ const BannerV3 = ({ hasBg }: DataType) => {
                 videoId="mdO0JCx29NA"
                 onClose={() => setIsOpen(false)}
             />
+            <TrialModal open={trialOpen} onClose={() => setTrialOpen(false)} />
         </>
     );
 };

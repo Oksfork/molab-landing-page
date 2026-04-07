@@ -5,6 +5,8 @@ import useSidebarMenu from '@/hooks/useSidebarMenu';
 // import useSubMenuToggle from '@/hooks/useSubMenuToggle';
 import Image from 'next/image';
 import molabLogo from "@/assets/img/logo/molab_app_logo.png"
+import { useState } from "react";
+import TrialModal from "../modals/TrialModal";
 
 interface DataType {
     sectionClass?: string
@@ -14,6 +16,7 @@ const HeaderV10 = ({ sectionClass }: DataType) => {
 
     const isMenuSticky = useStickyMenu();
     const { isOpen, openMenu, closeMenu } = useSidebarMenu();
+    const [trialOpen, setTrialOpen] = useState(false);
     // const toggleSubMenu = useSubMenuToggle();
 
     return (
@@ -52,9 +55,14 @@ const HeaderV10 = ({ sectionClass }: DataType) => {
                             <div className="attr-nav">
                                 <ul>
                                     <li className="button">
-                                        <Link href="https://wa.me/5491173576766?text=Hola,%20quiero%20probar%20la%20demo%20de%20MOLAB" target="_blank"
-                                        aria-label="Solicitar prueba sin costo"
-                                        >PRUEBA SIN COSTO</Link>
+                                        <button
+                                            type="button"
+                                            aria-label="Solicitar prueba sin costo"
+                                            className="btn btn-sm btn-theme secondary"
+                                            onClick={() => setTrialOpen(true)}
+                                        >
+                                            PRUEBA SIN COSTO
+                                        </button>
                                     </li>
                                 </ul>
                             </div>
@@ -90,21 +98,24 @@ const HeaderV10 = ({ sectionClass }: DataType) => {
                                     </Link>
                                 </li>
                                 <li className="mobile-sidebar-button">
-                                    <Link 
-                                        href="https://wa.me/5491173576766?text=Hola,%20quiero%20probar%20la%20demo%20de%20MOLAB" 
-                                        target="_blank"
+                                    <button
+                                        type="button"
                                         className="btn btn-sm btn-theme secondary"
-                                        onClick={closeMenu}
+                                        onClick={() => {
+                                            closeMenu();
+                                            setTrialOpen(true);
+                                        }}
                                         aria-label="Solicitar prueba sin costo"
                                     >
                                         Prueba sin costo
-                                    </Link>
+                                    </button>
                                 </li>
                             </ul>
                         </nav>
                     </div>
                 </nav>
             </header>
+            <TrialModal open={trialOpen} onClose={() => setTrialOpen(false)} />
         </>
     );
 };

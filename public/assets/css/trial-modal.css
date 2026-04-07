@@ -1,0 +1,180 @@
+/* Modal "Prueba sin costo" — alineado a paleta oscura + azul/violeta del sitio */
+
+.trial-modal-backdrop {
+  display: block;
+  background: radial-gradient(
+      ellipse 120% 80% at 50% -20%,
+      rgba(81, 83, 255, 0.18) 0%,
+      transparent 55%
+    ),
+    rgba(12, 10, 22, 0.78);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.trial-modal-dialog {
+  max-width: 460px;
+}
+
+.trial-modal-content {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(81, 83, 255, 0.28);
+  border-radius: 14px;
+  background: linear-gradient(
+    165deg,
+    #17142a 0%,
+    var(--boxdark-2, #1a222c) 42%,
+    #0f141f 100%
+  );
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset,
+    0 -1px 40px rgba(81, 83, 255, 0.12);
+  color: var(--whiten, #f1f5f9);
+}
+
+.trial-modal-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at 100% 0%,
+    rgba(166, 5, 153, 0.15) 0%,
+    transparent 45%
+  );
+  opacity: 0.9;
+}
+
+.trial-modal-content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--bg-gradient-reverse, linear-gradient(90deg, #5153ff 0%, #a60599 100%));
+  pointer-events: none;
+}
+
+.trial-modal-header {
+  position: relative;
+  z-index: 1;
+  border-bottom: 1px solid rgba(46, 58, 71, 0.85);
+  padding: 0.75rem 0.75rem 0.25rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.trial-modal-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  margin-bottom: 0;
+}
+
+.trial-modal-icon {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 0.75rem;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: var(--whiten, #f1f5f9);
+  background: linear-gradient(135deg, rgba(81, 83, 255, 0.35) 0%, rgba(166, 5, 153, 0.25) 100%);
+  border: 1px solid rgba(81, 83, 255, 0.35);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.trial-modal-icon i {
+  font-size: 18px;
+}
+
+.trial-modal-title {
+  margin: 0 0 0.35rem;
+  padding: 0 0.5rem;
+  max-width: 22rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  background: var(--bg-gradient-reverse, linear-gradient(90deg, #5153ff 0%, #ae64ff 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (min-width: 400px) {
+  .trial-modal-title {
+    font-size: 1.25rem;
+  }
+}
+
+.trial-modal-close {
+  position: relative;
+  z-index: 2;
+  opacity: 0.75;
+  filter: invert(1) grayscale(1);
+}
+
+.trial-modal-close:hover {
+  opacity: 1;
+}
+
+.trial-modal-body {
+  position: relative;
+  z-index: 1;
+  padding: 1rem 1.25rem 1.35rem;
+}
+
+.trial-modal-lead {
+  color: var(--bodydark, #aeb7c0);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  text-align: center;
+  max-width: 24rem;
+  margin: 0 auto 1.25rem;
+  padding: 0 0.25rem;
+}
+
+.trial-modal .form-label {
+  color: rgba(241, 245, 249, 0.88);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+}
+
+.trial-modal .form-control {
+  background-color: var(--form-input, #1d2a39);
+  border: 1px solid var(--form-strokedark, #3d4d60);
+  color: var(--whiten, #f1f5f9);
+  border-radius: 8px;
+  padding: 0.55rem 0.85rem;
+}
+
+.trial-modal .form-control::placeholder {
+  color: rgba(174, 183, 192, 0.55);
+}
+
+.trial-modal .form-control:focus {
+  border-color: rgba(81, 83, 255, 0.55);
+  box-shadow: 0 0 0 3px rgba(81, 83, 255, 0.18);
+  background-color: var(--form-input, #1d2a39);
+  color: var(--whiten, #f1f5f9);
+}
+
+.trial-modal-actions {
+  margin-top: 0.25rem;
+}
+
+.trial-modal-actions .btn.btn-theme.secondary {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Evitar que reglas globales de `button` dejen los CTAs demasiado grandes en el modal */
+.trial-modal-content.trial-modal button.btn.btn-sm {
+  padding: 10px 22px;
+  font-size: 14px;
+}

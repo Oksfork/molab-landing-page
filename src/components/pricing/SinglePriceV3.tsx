@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import TrialModal from '../modals/TrialModal';
 
 interface DataType {
     id?: number;
@@ -16,6 +17,7 @@ interface DataType {
 const SinglePriceV3 = ({ plan }: { plan: DataType }) => {
     const { name, features, price, billing_cycle, tag, btnClass } = plan;
     const [isHovered, setIsHovered] = useState(false);
+    const [trialOpen, setTrialOpen] = useState(false);
     const isPremium = name === 'Premium';
 
     return (
@@ -62,11 +64,17 @@ const SinglePriceV3 = ({ plan }: { plan: DataType }) => {
                     <h2 className="price-value">
                         <sup>$</sup>{price} <sub>/ {billing_cycle}</sub>
                     </h2>
-                    <Link className={`btn mt-25 btn-sm effect ${btnClass}`} href="https://wa.me/5491173576766" target="_blank" aria-label="Solicitar prueba sin costo">
-                        Purchase Plan
-                    </Link>
+                    <button
+                        type="button"
+                        className={`btn mt-25 btn-sm effect ${btnClass}`}
+                        aria-label="Solicitar prueba sin costo"
+                        onClick={() => setTrialOpen(true)}
+                    >
+                        Prueba sin costo
+                    </button>
                 </div>
             </div>
+            <TrialModal open={trialOpen} onClose={() => setTrialOpen(false)} />
         </article>
     );
 };

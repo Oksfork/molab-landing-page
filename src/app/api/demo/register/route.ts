@@ -32,6 +32,13 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    console.log([
+      "secret key", turnstile_token,
+      "api base", apiBase,
+      "name", name,
+      "email", email,
+    ])
+
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 20_000);
 

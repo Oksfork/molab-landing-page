@@ -14,7 +14,7 @@ type TrialModalProps = {
 export default function TrialModal({
   open,
   onClose,
-  title = "Llev? tu laboratorio dental al siguiente nivel.",
+  title = "Llevá tu laboratorio dental al siguiente nivel.",
 }: TrialModalProps) {
   const titleId = useId();
   const dialogRef = useRef<HTMLDivElement | null>(null);
@@ -52,17 +52,17 @@ export default function TrialModal({
     e.preventDefault();
 
     if (!labName.trim() || !email.trim()) {
-      toast.error("Complet? nombre del laboratorio y correo electr?nico.");
+      toast.error("Completá nombre del laboratorio y correo electrónico.");
       return;
     }
 
     if (!siteKey) {
-      toast.error("La verificaci?n de seguridad no est? configurada.");
+      toast.error("La verificación de seguridad no está configurada.");
       return;
     }
 
     if (!turnstileToken) {
-      toast.error("Complet? la verificaci?n de seguridad.");
+      toast.error("Completá la verificación de seguridad.");
       return;
     }
 
@@ -95,7 +95,7 @@ export default function TrialModal({
         return;
       }
 
-      toast.success("?Listo! Te enviamos la demo a tu correo.");
+      toast.success("¡Listo! Te enviamos la demo a tu correo.");
       onClose();
       setLabName("");
       setEmail("");
@@ -146,7 +146,7 @@ export default function TrialModal({
                 {title}
               </h5>
               <p className="trial-modal-lead">
-                Cre? tu cuenta gratuita y prob? nuestra demo completa: organizaci?n, control y
+                Cre&aacute; tu cuenta gratuita y prob&aacute; nuestra demo completa: organizaci&oacute;n, control y
                 eficiencia en un solo lugar.
               </p>
             </div>
@@ -160,7 +160,7 @@ export default function TrialModal({
                   id="trial_lab_name"
                   name="name"
                   className="form-control"
-                  placeholder="Ej: Laboratorio Dental San Mart?n"
+                  placeholder="Ej: Laboratorio Dental San Martín"
                   value={labName}
                   onChange={(e) => setLabName(e.target.value)}
                   required
@@ -170,7 +170,7 @@ export default function TrialModal({
 
               <div className="form-group">
                 <label className="form-label" htmlFor="trial_email">
-                  Correo electr?nico
+                  Correo electrónico
                 </label>
                 <input
                   id="trial_email"

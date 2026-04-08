@@ -167,6 +167,7 @@
 
 .trial-modal-actions {
   margin-top: 0.25rem;
+  align-items: stretch;
 }
 
 .trial-modal-actions .btn.btn-theme.secondary {

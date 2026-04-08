@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
 
     const name = (body?.name ?? "").trim();
     const email = (body?.email ?? "").trim();
-    const turnstile_token = process.env.TURNSTILE_SECRET_KEY || "";
+    const turnstile_token = `${process.env.TURNSTILE_SECRET_KEY}` || "";
 
     if (!name || !email || !turnstile_token) {
       return NextResponse.json(

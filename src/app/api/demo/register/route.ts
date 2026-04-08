@@ -38,9 +38,27 @@ export async function POST(request: NextRequest) {
 
     let upstream: Response;
     try {
+      const origin = request.headers.get("origin") || "";
+      const referer = request.headers.get("referer") || "";
+      const forwardedFor = request.headers.get("x-forwarded-for") || "";
+      const forwardedProto = request.headers.get("x-forwarded-proto") || "";
+      const forwardedHost = request.headers.get("x-forwarded-host") || "";
+      const host = request.headers.get("host") || "";
+
       upstream = await fetch(joinUrl(apiBase, "/api/demo/register"), {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          ...(origin ? { Origin: origin } : {}),
+          ...(referer ? { Referer: referer } : {}),
+          ...(forwardedFor ? { "X-Forwarded-For": forwardedFor } : {}),
+          ...(forwardedProto ? { "X-Forwarded-Proto": forwardedProto } : {}),
+          ...(forwardedHost
+            ? { "X-Forwarded-Host": forwardedHost }
+            : host
+              ? { "X-Forwarded-Host": host }
+              : {}),
+        },
         body: JSON.stringify({ name, email, turnstile_token }),
         signal: controller.signal,
       });

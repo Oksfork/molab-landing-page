@@ -11,11 +11,12 @@ export async function POST(request: NextRequest) {
     const body = (await request.json()) as {
       name?: string;
       email?: string;
+      turnstile_token?: string;
     };
 
     const name = (body?.name ?? "").trim();
     const email = (body?.email ?? "").trim();
-    const turnstile_token = `${process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}` || "";
+    const turnstile_token = (body?.turnstile_token ?? "").trim();
 
     if (!name || !email || !turnstile_token) {
       return NextResponse.json(
@@ -37,27 +38,9 @@ export async function POST(request: NextRequest) {
 
     let upstream: Response;
     try {
-      const origin = request.headers.get("origin") || "";
-      const referer = request.headers.get("referer") || "";
-      const forwardedFor = request.headers.get("x-forwarded-for") || "";
-      const forwardedProto = request.headers.get("x-forwarded-proto") || "";
-      const forwardedHost = request.headers.get("x-forwarded-host") || "";
-      const host = request.headers.get("host") || "";
-
       upstream = await fetch(joinUrl(apiBase, "/api/demo/register"), {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          ...(origin ? { Origin: origin } : {}),
-          ...(referer ? { Referer: referer } : {}),
-          ...(forwardedFor ? { "X-Forwarded-For": forwardedFor } : {}),
-          ...(forwardedProto ? { "X-Forwarded-Proto": forwardedProto } : {}),
-          ...(forwardedHost
-            ? { "X-Forwarded-Host": forwardedHost }
-            : host
-              ? { "X-Forwarded-Host": host }
-              : {}),
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, turnstile_token }),
         signal: controller.signal,
       });

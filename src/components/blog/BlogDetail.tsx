@@ -151,8 +151,8 @@ const BlogDetail = ({ blog, relatedBlogs = [] }: BlogDetailProps) => {
                                     Descargá el instalador de MolabPrinter para comenzar con la instalación.
                                 </p>
                                 <a 
-                                    href="https://github.com/Oksfork/nodejs-escpos-printer/releases/download/v1.6/Molab_Printer_Setup_1.6.0.exe"
-                                    download="Molab_Printer_Setup_1.6.0.exe"
+                                    href="https://github.com/Oksfork/nodejs-escpos-printer/releases/download/v1.6.1/Molab_Printer_Setup_1.6.1.exe"
+                                    download="Molab_Printer_Setup_1.6.1.exe"
                                     className="btn btn-theme blog-download-btn"
                                 >
                                     <i className="fas fa-download" /> Descargar Instalador

@@ -1,5 +1,5 @@
 services:
-  web:
+  molab-web-page:
     build:
       context: .
       dockerfile: Dockerfile

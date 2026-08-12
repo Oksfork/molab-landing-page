@@ -3,15 +3,19 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        # NEXT_PUBLIC_* se inlinan en el build del cliente
+        NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${NEXT_PUBLIC_TURNSTILE_SITE_KEY}
+        NEXT_PUBLIC_API_DEMO: ${NEXT_PUBLIC_API_DEMO}
     image: molab-landing-page:latest
     ports:
       - "3000:3000"
     environment:
       - NODE_ENV=production
       - NEXT_PUBLIC_TURNSTILE_SITE_KEY=${NEXT_PUBLIC_TURNSTILE_SITE_KEY}
+      - NEXT_PUBLIC_API_DEMO=${NEXT_PUBLIC_API_DEMO}
       - TURNSTILE_SECRET_KEY=${TURNSTILE_SECRET_KEY}
       - CONTACT_PHP_ENDPOINT=${CONTACT_PHP_ENDPOINT:-https://artecinvent.com/contact-smtp-molab.php}
     env_file:
       - .env
     restart: unless-stopped
-

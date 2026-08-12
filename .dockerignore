@@ -21,6 +21,9 @@ coverage
 .env.*
 !.env.example
 
+# Keep .npmrc in the image build (peer deps / install flags)
+!.npmrc
+
 # Logs & OS junk
 npm-debug.log*
 yarn-debug.log*

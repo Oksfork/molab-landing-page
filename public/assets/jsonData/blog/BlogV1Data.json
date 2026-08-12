@@ -47,7 +47,7 @@
       "images": {
         "thumbnail": "/assets/img/blog/1.jpg",
         "featured": "/assets/img/blog/1-full.jpg",
-        "ogImage": "/assets/img/blog/1-og.jpg"
+        "ogImage": "/assets/img/blog/1-full.jpg"
       },
       "seo": {
         "metaTitle": "Guía de Gestión Dental | Molab.app",

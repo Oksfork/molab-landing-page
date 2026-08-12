@@ -151,7 +151,7 @@ const BlogDetail = ({ blog, relatedBlogs = [] }: BlogDetailProps) => {
                                     Descargá el instalador de MolabPrinter para comenzar con la instalación.
                                 </p>
                                 <a 
-                                    href="https://github.com/Oksfork/nodejs-escpos-printer/releases/download/v1.6.2/Molab_Printer_Setup_1.6.2.exe"
+                                    href="https://github.com/Oksfork/nodejs-escpos-printer/releases/download/v1.7.2/Molab.Printer.Setup.1.7.2.exe"
                                     download="Molab_Printer_Setup_1.6.2.exe"
                                     className="btn btn-theme blog-download-btn"
                                 >
@@ -162,13 +162,11 @@ const BlogDetail = ({ blog, relatedBlogs = [] }: BlogDetailProps) => {
                     </div>
                 )}
 
-                {/* Contenido del blog */}
                 <div 
                     className="blog-detail-content"
                     dangerouslySetInnerHTML={{ __html: blog.content }}
                 />
 
-                {/* Tags */}
                 {blog.tags && blog.tags.length > 0 && (
                     <div className="blog-tags mt-5">
                         <span className="blog-tags-label">Tags:</span>

@@ -1,0 +1,49 @@
+{
+  "floaters": [
+    {
+      "icon": "fas fa-globe",
+      "text": "Sin instalar. 100% online"
+    },
+    {
+      "icon": "fas fa-cloud",
+      "text": "Desde cualquier lugar"
+    },
+    {
+      "icon": "fas fa-database",
+      "text": "Backups todos los días"
+    },
+    {
+      "icon": "fas fa-server",
+      "text": "Instancia por laboratorio"
+    }
+  ],
+  "plan": {
+    "id": "monthly",
+    "badge": "Mensual",
+    "featured": true,
+    "subtitle": "Plan único, con todo incluido",
+    "amount": "USD 49",
+    "period": "/mes",
+    "features": [
+      "Todas las funcionalidades incluidas",
+      "Actualizaciones permanentes"
+    ],
+    "support": {
+      "title": "Soporte humano, siempre",
+      "items": [
+        "Atención directa por WhatsApp",
+        "Asistencia remota cuando la necesitás",
+        "Acompañamiento para comenzar y migrar",
+        "Ayuda personalizada en cada etapa"
+      ]
+    },
+    "promo": {
+      "label": "Promo anual",
+      "text": "USD 490 / año. Ahorrás 2 meses.",
+      "href": "https://wa.me/5491173576766?text=Hola,%20quiero%20el%20plan%20anual%20de%20MOLAB"
+    },
+    "ctaLabel": "Comenzar ahora",
+    "ctaHref": "https://wa.me/5491173576766?text=Hola,%20quiero%20el%20plan%20mensual%20de%20MOLAB",
+    "note": "Cancelá cuando quieras"
+  }
+}

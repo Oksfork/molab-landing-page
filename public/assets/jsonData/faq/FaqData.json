@@ -1,0 +1,92 @@
+[
+  {
+    "id": "instalacion",
+    "home": true,
+    "question": "¿Tengo que instalar el sistema?",
+    "answer": "No. MOLAB es 100% online: lo usás desde el navegador, en cualquier dispositivo, sin instalar programas en la computadora."
+  },
+  {
+    "id": "alcance",
+    "home": true,
+    "question": "¿MOLAB tiene agenda, historia clínica u odontograma?",
+    "answer": "No. MOLAB está desarrollado para laboratorios dentales, no para consultorios. El foco es el seguimiento de órdenes de trabajo, no la historia clínica del paciente."
+  },
+  {
+    "id": "precio",
+    "home": true,
+    "question": "¿Cuánto cuesta MOLAB?",
+    "answer": "USD 49 por mes o USD 490 por año. Es un plan único, con todas las funcionalidades incluidas."
+  },
+  {
+    "id": "migracion",
+    "home": true,
+    "question": "Ya uso otro sistema, ¿puedo migrar a MOLAB?",
+    "answer": "Sí. Te ayudamos a migrar tus datos. El costo depende del volumen y, según el caso, puede haber bonificaciones comerciales. Te asesoramos para ver la mejor opción para tu laboratorio."
+  },
+  {
+    "id": "seguridad",
+    "question": "¿Tus datos están seguros?",
+    "answer": "Sí. Los protegemos con copias de seguridad automáticas todos los días. Además, contamos con medidas de seguridad para proteger el acceso y almacenamiento de toda tu información."
+  },
+  {
+    "id": "seguimiento-ordenes",
+    "question": "¿Puedo hacer seguimiento de las órdenes de trabajo?",
+    "answer": "Sí. Podés seguir cada orden con cambios de estado y trazabilidad desde la recepción hasta la entrega."
+  },
+  {
+    "id": "tecnicos-comisiones",
+    "question": "¿Puedo asignar técnicos y gestionar sus comisiones?",
+    "answer": "Sí. Los técnicos se vinculan a las órdenes para controlar el trabajo y las comisiones."
+  },
+  {
+    "id": "tickets",
+    "question": "¿Puedo imprimir tickets para acompañar los trabajos?",
+    "answer": "Sí. MOLAB permite imprimir tickets para acompañar el flujo de trabajo en el laboratorio."
+  },
+  {
+    "id": "tercerizaciones",
+    "question": "¿Puedo gestionar trabajos enviados a otros laboratorios o proveedores?",
+    "answer": "Sí. Podés generar órdenes de tercerización, asignar proveedores y hacer seguimiento de costos."
+  },
+  {
+    "id": "rentabilidad",
+    "question": "¿Puedo conocer la rentabilidad de cada trabajo?",
+    "answer": "Sí. Registrando costos de materiales, mano de obra y tercerizaciones podés ver la rentabilidad de cada trabajo."
+  },
+  {
+    "id": "tiempos-entrega",
+    "question": "¿MOLAB mide los tiempos de entrega?",
+    "answer": "Sí. El sistema ofrece métricas de promedio general de entrega."
+  },
+  {
+    "id": "liquidaciones",
+    "question": "¿Puedo generar liquidaciones y controlar la cuenta corriente?",
+    "answer": "Sí. MOLAB gestiona pagos, movimientos y la cuenta corriente de cada cliente."
+  },
+  {
+    "id": "notas-credito",
+    "question": "¿MOLAB permite emitir notas de crédito?",
+    "answer": "Sí. Podés emitir notas de crédito para ajustes sobre trabajos ya liquidados."
+  },
+  {
+    "id": "envio-liquidaciones",
+    "question": "¿Puedo enviar las liquidaciones a los clientes?",
+    "answer": "Sí. Cada liquidación se envía por email con el PDF adjunto, para que el cliente reciba el detalle sin reenviar archivos a mano."
+  },
+  {
+    "id": "gastos-proveedores",
+    "question": "¿Puedo registrar gastos y proveedores?",
+    "answer": "Sí. Podés registrar gastos y proveedores para el análisis económico del laboratorio."
+  },
+  {
+    "id": "portal-clientes",
+    "question": "¿Mis clientes pueden acceder a MOLAB?",
+    "answer": "Sí. Cuentan con un portal de clientes, separado del backoffice del laboratorio."
+  },
+  {
+    "id": "arca",
+    "home": true,
+    "question": "¿MOLAB realiza facturación electrónica ante ARCA?",
+    "answer": "No en este momento. MOLAB gestiona la liquidación interna y la cuenta corriente, pero no emite facturación electrónica directa ante ARCA."
+  }
+]

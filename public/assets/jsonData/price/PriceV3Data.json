@@ -10,7 +10,7 @@
         ],
         "price": 16,
         "billing_cycle": "Monthly",
-        "btnClass": "btn-theme secondary"
+        "btnClass": "btn-cta"
     },
     {
         "id": 2,

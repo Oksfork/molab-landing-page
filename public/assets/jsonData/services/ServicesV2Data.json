@@ -1,44 +1,44 @@
 [
     {
         "id": 1,
-        "icon": "appoinment.png",
-        "iconDark": "appoinment-light.png",
-        "title": "Registro de clientes y cuentas corrientes",
-        "category": "Registro"
+        "icon": "team.png",
+        "iconDark": "team-light.png",
+        "title": "Órdenes",
+        "text": "De la recepción a la entrega, con estados y tickets."
     },
     {
         "id": 2,
-        "icon": "team.png",
-        "iconDark": "team-light.png",
-        "title": "Control de órdenes y entregas",
-        "category": "Gestión"
+        "icon": "appoinment.png",
+        "iconDark": "appoinment-light.png",
+        "title": "Clientes y profesionales",
+        "text": "Ficha, cuenta corriente y portal."
     },
     {
         "id": 3,
         "icon": "users.png",
         "iconDark": "users-light.png",
-        "title": "Cobros y liquidaciones automáticas",
-        "category": "Control financiero"
+        "title": "Pagos y liquidaciones",
+        "text": "Movimientos, PDF y envío por email."
     },
     {
         "id": 4,
         "icon": "creativity.png",
         "iconDark": "creativity-light.png",
-        "title": "Trazabilidad completa",
-        "category": "Seguimiento"
+        "title": "Costos y rentabilidad",
+        "text": "Materiales, mano de obra y tercerizaciones."
     },
     {
         "id": 5,
         "icon": "cloud-lock.png",
         "iconDark": "cloud-lock-light.png",
-        "title": "Reportes y exportación",
-        "category": "Metadata"
+        "title": "Reportes",
+        "text": "Tiempos, pendientes y exportación."
     },
     {
         "id": 6,
         "icon": "cloud-lock.png",
         "iconDark": "cloud-lock-light.png",
-        "title": "Plataforma 24/7 en la nube",
-        "category": "Acceso ilimitado"
+        "title": "Equipo",
+        "text": "Técnicos, comisiones y tercerizaciones."
     }
 ]

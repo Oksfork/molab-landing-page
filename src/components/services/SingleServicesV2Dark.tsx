@@ -8,10 +8,19 @@ interface DataType {
     iconDark?: string;
     title?: string;
     category?: string;
+    text?: string;
 }
 
-const SingleServicesV2Dark = ({ service, index }: { service: DataType, index?: number }) => {
-    const { iconDark, title, category } = service;
+const SingleServicesV2Dark = ({
+    service,
+    index,
+    ariaLabel,
+}: {
+    service: DataType;
+    index?: number;
+    ariaLabel?: string;
+}) => {
+    const { iconDark, title, category, text } = service;
     const [isHovered, setIsHovered] = useState(false);
     const animationDelay = (index || 0) * 0.1;
 
@@ -21,7 +30,7 @@ const SingleServicesV2Dark = ({ service, index }: { service: DataType, index?: n
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             style={{ animationDelay: `${animationDelay}s` }}
-            aria-label={`Ventaja ${index || 0} de Molab.app - Software de gestión para laboratorios dentales`}
+            aria-label={ariaLabel || `Ventaja ${index || 0} de Molab.app - Software de gestión para laboratorios dentales`}
         >
             <div className="glass-layer" />
             <div className="top-glow" />
@@ -45,6 +54,7 @@ const SingleServicesV2Dark = ({ service, index }: { service: DataType, index?: n
                     <h3 className="title-text">
                         {title}
                     </h3>
+                    {text ? <p className="service-line">{text}</p> : null}
                 </div>
             </div>
         </article>

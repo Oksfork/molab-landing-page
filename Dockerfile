@@ -2,16 +2,15 @@
 FROM node:20-alpine AS base
 WORKDIR /app
 RUN apk add --no-cache libc6-compat
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN corepack enable
 
 # ----------- Dependencies -----------
 FROM base AS deps
-COPY package.json package-lock.json* yarn.lock* pnpm-lock.yaml* .npmrc* ./
-RUN \
-  if [ -f package-lock.json ]; then npm ci --legacy-peer-deps; \
-  elif [ -f yarn.lock ]; then yarn install --frozen-lockfile; \
-  elif [ -f pnpm-lock.yaml ]; then corepack enable && pnpm i --frozen-lockfile; \
-  else echo "No lockfile found." && exit 1; \
-  fi
+COPY package.json pnpm-lock.yaml .npmrc ./
+RUN corepack prepare pnpm@9.15.9 --activate \
+  && pnpm install --frozen-lockfile
 
 # ----------- Builder -----------
 FROM base AS builder
@@ -26,7 +25,8 @@ ENV NEXT_PUBLIC_TURNSTILE_SITE_KEY=$NEXT_PUBLIC_TURNSTILE_SITE_KEY
 ENV NEXT_PUBLIC_API_DEMO=$NEXT_PUBLIC_API_DEMO
 ENV NEXT_TELEMETRY_DISABLED=1
 
-RUN npm run build
+RUN corepack prepare pnpm@9.15.9 --activate \
+  && pnpm run build
 
 # ----------- Runner -----------
 FROM node:20-alpine AS runner

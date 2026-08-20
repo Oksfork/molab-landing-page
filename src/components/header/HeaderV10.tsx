@@ -45,7 +45,10 @@ const HeaderV10 = ({ sectionClass }: DataType) => {
                                     <Link href="/" className="nav-link">Inicio</Link>
                                 </li>
                                 <li>
-                                    <Link href="/blogs" className="nav-link">Recursos</Link>
+                                    <Link href="/blogs" className="nav-link">Tutoriales</Link>
+                                </li>
+                                <li>
+                                    <Link href="/#faq" className="nav-link">¿Alguna duda?</Link>
                                 </li>
                             </ul>
                         </div>
@@ -58,7 +61,7 @@ const HeaderV10 = ({ sectionClass }: DataType) => {
                                         <button
                                             type="button"
                                             aria-label="Solicitar prueba sin costo"
-                                            className="btn btn-sm btn-theme secondary"
+                                            className="btn btn-sm btn-cta"
                                             onClick={() => setTrialOpen(true)}
                                         >
                                             PRUEBA SIN COSTO
@@ -94,13 +97,18 @@ const HeaderV10 = ({ sectionClass }: DataType) => {
                                 </li>
                                 <li>
                                     <Link href="/blogs" className="mobile-sidebar-link" onClick={closeMenu}>
-                                        <i className="fas fa-blog" /> Blog
+                                        <i className="fas fa-blog" /> Tutoriales
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/#faq" className="mobile-sidebar-link" onClick={closeMenu}>
+                                        <i className="fas fa-question-circle" /> ¿Alguna duda?
                                     </Link>
                                 </li>
                                 <li className="mobile-sidebar-button">
                                     <button
                                         type="button"
-                                        className="btn btn-sm btn-theme secondary"
+                                        className="btn btn-sm btn-cta"
                                         onClick={() => {
                                             closeMenu();
                                             setTrialOpen(true);

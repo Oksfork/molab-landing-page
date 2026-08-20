@@ -1,51 +1,45 @@
-import shape44 from "@/assets/img/shape/44.png"
-import Image from "next/image"
-import Link from "next/link"
+import LaunchOfferData from "@/assets/jsonData/price/LaunchOfferData.json";
+import LaunchPlanCard, { type LaunchPlan } from "./LaunchPlanCard";
+import "@/assets/css/launch-cta.css";
+
+type LaunchFloater = {
+  icon: string;
+  text: string;
+};
 
 const BannerV4 = () => {
-    return (
-            <section 
-                className="banner-style-four-area text-center text-light" 
-                style={{ backgroundImage: 'url(/assets/img/shape/42.png)' }}
-                aria-label="El futuro de tu laboratorio dental está en la nube - Software de gestión para laboratorios dentales">
-                <div className="banner-style-four-shape">
-                    <Image src={shape44} alt="Ilustración decorativa de Molab.app en la nube" />
-                </div>
-                <div className="container mt-60">
-                  <div className="row">
-                    <div className="col-lg-8 offset-lg-2">
-                      <div className="price-v3-cta-section text-center">
-                        <div className="price-v3-cta-top-glow" />
-                        <div className="price-v3-cta-radial-gradient" />
-                
-                        <div className="price-v3-cta-icon-wrapper">
-                          <i className="fas fa-rocket" />
-                        </div>
-                
-                        <h2 className="price-v3-cta-title text-light">
-                          Comenzá a gestionar tu laboratorio con{' '}
-                          <span className="text-gradient">
-                            MOLAB
-                          </span>
-                        </h2>
-                        <p className="price-v3-cta-text text-light">
-                          Centralizá toda la operación en una sola plataforma, intuitiva y pensada para vos.
-                        </p>
-                        <Link 
-                          href="https://wa.me/5491173576766?text=Hola,%20quiero%20saber%20los%20costos%20de%20suscripcion%20a%20MOLAB" 
-                          className="price-v3-btn-glass effect"
-                        >
-                          <span>
-                          Obtené la promo lanzamiento{' '}
-                            <i className="fas fa-arrow-right ms-10" />
-                          </span>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </section>
-    );
+  const floaters = LaunchOfferData.floaters as LaunchFloater[];
+  const plan = LaunchOfferData.plan as LaunchPlan;
+
+  return (
+    <section
+      className="banner-style-four-area launch-cta-area text-light"
+      aria-label="Planes y precios de Molab.app"
+    >
+      <div className="container">
+        <div className="site-heading secondary text-center mb-4">
+          <h2 className="heading text-light">
+            Un plan. Precio claro.{" "}
+            <span className="text-gradient">Alguien del otro lado</span>
+          </h2>
+          <p className="mt-3" style={{ color: "var(--bodydark)" }}>
+            Plan único. Promo anual: USD 490 (2 meses de ahorro).
+          </p>
+        </div>
+
+        <LaunchPlanCard plan={plan} />
+
+        <ul className="launch-cta-highlights">
+          {floaters.map((item) => (
+            <li key={item.text}>
+              <i className={item.icon} aria-hidden="true" />
+              <span>{item.text}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
 };
 
 export default BannerV4;

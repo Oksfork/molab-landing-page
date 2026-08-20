@@ -30,23 +30,7 @@ const PagePatternWrapper = ({ children }: PagePatternWrapperProps) => {
                     pointerEvents: 'none'
                 }}
             />
-            <div 
-                className="page-shape-overlay"
-                style={{
-                    position: 'fixed',
-                    left: 0,
-                    top: 0,
-                    height: '100%',
-                    width: '100%',
-                    backgroundImage: 'url(/assets/img/shape/5.png)',
-                    backgroundSize: 'contain',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'top left',
-                    opacity: 0.5,
-                    zIndex: 0,
-                    pointerEvents: 'none'
-                }}
-            />
+            
             <div style={{ position: 'relative', zIndex: 1 }}>
                 {children}
             </div>

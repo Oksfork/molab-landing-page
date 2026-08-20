@@ -11,15 +11,9 @@ const ServicesV2Dark = () => {
                         <div className="col-lg-8">
                             <div className="site-heading services-header-dark">
                                 <h2 className="title">
-                                    Descubrí las poderosas ventajas para 
-                                    <span className="text-gradient">
-                                        {' '}
-                                    aumentar tu productividad
-                                    </span>
+                                    Lo que el laboratorio necesita, en un{" "}
+                                    <span className="text-gradient">solo sistema</span>
                                 </h2>
-                                <span className="description">
-                                    Una suite completa de herramientas diseñadas para optimizar la gestión de tu laboratorio con tecnología de vanguardia.
-                                </span>
                             </div>
                         </div>
                         <div className="col-lg-12">

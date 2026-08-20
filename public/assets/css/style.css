@@ -1939,38 +1939,56 @@ button i {
 
 .btn.btn-theme.secondary {
 	color: var(--white);
-	border: none;
-	background: var(--color-optional);
+	background: rgba(60, 80, 224, 0.2);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid rgba(60, 80, 224, 0.3);
+	box-shadow: 0 4px 16px rgba(60, 80, 224, 0.2);
+	border-radius: 14px;
 }
 
 .btn.btn-theme.secondary::after {
-	position: absolute;
-	top: inherit;
-	right: inherit;
-	bottom: inherit;
-	left: -5%;
-	content: "";
-	height: 150px;
-	width: 115%;
-	z-index: -1;
-	background-color: var(--dark);
-	-webkit-transition: all 0.25s ease-in-out;
-	transition: all 0.25s ease-in-out;
-	-webkit-transform: translateY(-45%) skew(25deg) scale(0);
-	transform: translateY(-45%) skew(25deg) scale(0);
+	display: none;
 }
 
 .text-light .btn.btn-theme.secondary::after {
-	background-color: var(--white);
+	display: none;
 }
 
 .text-light .btn.btn-theme.secondary:hover {
-	color: var(--color-heading);
+	color: var(--white);
+}
+
+.btn.btn-theme.secondary:hover {
+	color: var(--white);
+	background: rgba(60, 80, 224, 0.3);
+	border-color: rgba(60, 80, 224, 0.4);
+	box-shadow: 0 6px 24px rgba(60, 80, 224, 0.3);
+	transform: translateY(-2px);
 }
 
 .btn.btn-theme.secondary:hover::after {
-	-webkit-transform: translateY(-45%) skew(25deg) scale(1.2);
-	transform: translateY(-45%) skew(25deg) scale(1.2);
+	display: none;
+}
+
+.btn.btn-cta {
+	color: #fff;
+	background: linear-gradient(135deg, #3C50E0 0%, #5b8ef5 55%, #80CAEE 100%);
+	border: 1px solid rgba(128, 202, 238, 0.45);
+	box-shadow: 0 8px 24px rgba(60, 80, 224, 0.5);
+	border-radius: 14px;
+}
+
+.btn.btn-cta::after {
+	display: none;
+}
+
+.btn.btn-cta:hover,
+.text-light .btn.btn-cta:hover {
+	color: #fff;
+	filter: brightness(1.08);
+	box-shadow: 0 10px 28px rgba(60, 80, 224, 0.6);
+	transform: translateY(-2px);
 }
 
 .btn.btn-theme.hover-light::after {
@@ -11899,12 +11917,20 @@ body {
 
 .glassmorphism-card .title-text {
 	font-size: 16px;
-	font-weight: 400;
+	font-weight: 600;
 	line-height: 1.5;
 	margin: 0;
 	color: var(--white);
 	transition: color 0.3s ease;
 	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.glassmorphism-card .service-line {
+	margin: 0;
+	color: var(--bodydark, #aeb7c0);
+	font-size: 0.92rem;
+	line-height: 1.45;
+	font-weight: 400;
 }
 
 .glassmorphism-card:hover,
@@ -14459,7 +14485,8 @@ ul.multi-button li:last-child a {
 }
 
 .secondary .btn.btn-theme {
-	background: var(--color-optional);
+	background: rgba(60, 80, 224, 0.2);
+	border: 1px solid rgba(60, 80, 224, 0.3);
 	color: var(--white);
 }
 
@@ -15485,7 +15512,7 @@ button.Toastify__close-button {
 	color: rgba(255, 255, 255, 0.85);
 	position: relative;
 	z-index: 1;
-	margin-bottom: 35px;
+	margin-bottom: 24px;
 }
 
 .price-v3-btn-glass {

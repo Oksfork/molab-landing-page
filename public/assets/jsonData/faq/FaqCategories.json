@@ -1,0 +1,30 @@
+[
+  {
+    "id": "ordenes",
+    "icon": "fas fa-clipboard-list",
+    "title": "Gestión de Órdenes de Trabajo",
+    "features": [
+      "Controlá cada orden desde la recepción hasta la entrega",
+      "Visualizá fechas y estados centralizados",
+      "Imprimí tickets para trazabilidad"
+    ]
+  },
+  {
+    "id": "clientes",
+    "icon": "fas fa-users",
+    "title": "Clientes, Profesionales y Pacientes",
+    "features": [
+      "Gestioná información completa de clientes y profesionales",
+      "Observaciones y datos de cada trabajo"
+    ]
+  },
+  {
+    "id": "pagos",
+    "icon": "fas fa-money-bill-wave",
+    "title": "Pagos y Liquidaciones",
+    "features": [
+      "Control de movimientos económicos",
+      "Liquidaciones automáticas y exportación a PDF/Excel"
+    ]
+  }
+]

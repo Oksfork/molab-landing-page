@@ -1,7 +1,7 @@
 "use client";
-import { useEffect } from 'react';
-import { ScrollToTop } from 'react-simple-scroll-up';
-import { ToastContainer } from 'react-toastify';
+import { useEffect } from "react";
+import { ToastContainer } from "react-toastify";
+import WhatsAppFloat from "./WhatsAppFloat";
 
 const Dependency = () => {
 
@@ -17,7 +17,7 @@ const Dependency = () => {
 
     return (
         <>
-            <ScrollToTop symbol={<i className="fas fa-long-arrow-up"></i>} />
+            <WhatsAppFloat />
             <ToastContainer />
         </>
     );

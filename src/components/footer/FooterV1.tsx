@@ -111,7 +111,10 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
                                         <form onSubmit={handleForm} className="d-flex flex-column gap-2">
                                             <label htmlFor="email">Email</label>
                                             <input type="email" placeholder="Tu email" className="form-control" name="email" autoComplete="off" required />
-                                            <button type="submit" className="w-100 btn btn-primary mt-2">Suscribirse</button>
+                                            <button type="submit" className="w-100 btn btn-theme secondary mt-2">
+                                                <i className="fas fa-envelope" />
+                                                Suscribirse
+                                            </button>
                                         </form>
                                     </div>
                                     <div className="copyright-text mt-40">
@@ -176,8 +179,15 @@ const FooterV1 = ({ logoColor, sectionClass }: DataType) => {
                                                 />
                                             </div>
                                         ) : null}
-                                        <button type="submit" className="btn btn-primary w-100 btn-sm" disabled={isSubmitting}>
-                                            {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
+                                        <button type="submit" className="btn btn-theme secondary w-100 btn-sm" disabled={isSubmitting}>
+                                            {isSubmitting ? (
+                                                "Enviando..."
+                                            ) : (
+                                                <>
+                                                    <i className="fas fa-paper-plane" />
+                                                    Enviar mensaje
+                                                </>
+                                            )}
                                         </button>
                                     </form>
                                 </div>

@@ -1,29 +1,29 @@
 [
     {
         "id": 1,
-        "title": "Registrá a tus clientes ",
-        "description": "Toda la información organizada en la nube.",
+        "title": "Cargás el cliente y el profesional",
+        "description": "La ficha queda lista para armar trabajos.",
         "steps": [],
         "activeClass": "active"
     },
     {
         "id": 2,
-        "title": "Creá órdenes de trabajo ",
-        "description": "Asigná tareas y responsables fácilmente.",
+        "title": "Armás la orden y asignás quién la hace",
+        "description": "Cada trabajo tiene un responsable.",
         "steps": [],
         "activeClass": ""
     },
     {
         "id": 3,
-        "title": "Hacé seguimiento en vivo ",
-        "description": "Controlá estados, tiempos y detalles en cualquier momento.",
+        "title": "Actualizás el estado hasta la entrega",
+        "description": "Sabés en qué paso está cada orden.",
         "steps": [],
         "activeClass": ""
     },
     {
         "id": 4,
-        "title": "Cerrá y liquidá con un clic ",
-        "description": "Facturación, cobros y reportes automáticos.",
+        "title": "Liquidás y cobrás",
+        "description": "La cuenta corriente queda al día.",
         "steps": [],
         "activeClass": ""
     }

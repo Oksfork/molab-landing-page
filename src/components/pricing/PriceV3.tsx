@@ -25,7 +25,7 @@ const PriceV3 = () => {
       title: "Clientes, Profesionales y Pacientes",
       features: [
         "Gestioná información completa de clientes y profesionales",
-        "Historial clínico vinculado a cada trabajo"
+        "Observaciones y datos de cada trabajo"
       ]
     },
     {

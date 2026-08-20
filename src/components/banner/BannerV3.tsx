@@ -4,8 +4,8 @@ import Image from "next/image";
 import Animate from "../animation/Animate";
 import il1 from "@/assets/img/illustration/ill_with_pc.png";
 import Link from "next/link";
-import ModalVideo from "react-modal-video";
 import TrialModal from "../modals/TrialModal";
+import VideoModal from "../modals/VideoModal";
 
 interface DataType {
     hasBg?: boolean
@@ -18,9 +18,8 @@ const BannerV3 = ({ hasBg }: DataType) => {
     return (
         <>
             <section className="banner-style-three-area overflow-hidden"
-                aria-label="Intro Molab.app - Prueba sin costo"
-                style={{ backgroundImage: hasBg ? 'url(/assets/img/banner/trama_background_banner_1.png)' : "none" }}>
-                <div className="banner-shape-left-top" style={{ backgroundImage: 'url(/assets/img/shape/5.png)' }} />
+                aria-label="Intro Molab.app - Prueba sin costo">
+                <div className="banner-shape-left-top" />
                 <div className="banner-style-three">
                     <div className="container">
                         <div className="pt-5">
@@ -38,9 +37,7 @@ const BannerV3 = ({ hasBg }: DataType) => {
                                         </Animate>
                                         <Animate className="animate__animated animate__fadeInUp" delay="900ms" duration="400ms">
                                             <p>
-                                            Centralizá trabajos, clientes, órdenes, pagos y liquidaciones en una única plataforma online
-                                            <br />
-                                            Moderno, ágil y accesible desde cualquier dispositivo.
+                                            Dejá atrás las planillas y tené toda la información de tu laboratorio, simple, ordenada y siempre a mano.
                                             </p>
                                         </Animate>
                                         <div className="d-flex flex-row justify-content-center justify-content-lg-start gap-3">
@@ -57,7 +54,7 @@ const BannerV3 = ({ hasBg }: DataType) => {
                                                 <button
                                                     type="button"
                                                     aria-label="Solicitar prueba sin costo"
-                                                    className="btn btn-sm btn-theme secondary"
+                                                    className="btn btn-sm btn-cta"
                                                     onClick={() => setTrialOpen(true)}
                                                 >
                                                     Prueba sin costo
@@ -79,9 +76,8 @@ const BannerV3 = ({ hasBg }: DataType) => {
                     </div>
                 </div>
             </section>
-            <ModalVideo
-                channel="youtube"
-                isOpen={isOpen}
+            <VideoModal
+                open={isOpen}
                 videoId="mdO0JCx29NA"
                 onClose={() => setIsOpen(false)}
             />

@@ -21,7 +21,7 @@ coverage
 .env.*
 !.env.example
 
-# Keep .npmrc in the image build (peer deps / install flags)
+# Keep .npmrc in the image build (peer deps / hoist)
 !.npmrc
 
 # Logs & OS junk

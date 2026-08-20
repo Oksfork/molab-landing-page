@@ -18,17 +18,15 @@ const ProcessV2 = () => {
                     <div className="col-lg-8 offset-lg-2">
                         <div className="heading-left text-center">
                             <h2 className="heading mb-3">
-                                Te contamos paso a paso
-                                <span className="text-gradient">
-                                    {' '}cómo funciona
-                                </span>
+                                Así se trabaja el{" "}
+                                <span className="text-gradient">día a día</span>
                             </h2>
                             <p style={{
                                 fontSize: '1.1rem',
                                 color: 'var(--bodydark)',
                                 marginTop: '16px'
                             }}>
-                                Desde el registro hasta la liquidación en solo 4 pasos
+                                Del ingreso de la orden a la liquidación, en cuatro pasos.
                             </p>
                         </div>
                     </div>

@@ -5,9 +5,8 @@ import DarkClass from "@/components/classes/DarkClass";
 import JsonLd from "@/components/seo/JsonLd";
 import BannerV3 from "@/components/banner/BannerV3";
 import ProcessV2 from "@/components/process/ProcessV2";
-import FeatureV1 from "@/components/features/FeatureV1";
 import ServicesV2Dark from "@/components/services/ServicesV2Dark";
-import PriceV3 from "@/components/pricing/PriceV3";
+import FaqList from "@/components/faq/FaqList";
 import BannerV4 from "@/components/banner/BannerV4";
 import { Metadata } from "next";
 
@@ -68,10 +67,9 @@ export default function HomePage() {
         <HeaderV10 sectionClass="dark"></HeaderV10>
         <main>
             <BannerV3 hasBg={false}></BannerV3>
-            <FeatureV1 />
-            <ProcessV2 />
             <ServicesV2Dark></ServicesV2Dark>
-            <PriceV3 />
+            <ProcessV2 />
+            <FaqList homeOnly showMoreLink />
             <BannerV4 />
         </main>
         <FooterV1 logoColor="light" />
